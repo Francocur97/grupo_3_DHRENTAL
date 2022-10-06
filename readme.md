@@ -9,3 +9,5 @@ https://www.famusic.com.ar/
 
 
 Augusto tengo 29 años soy de ramos mejia, toco la guitarra y estudio en digiral house, tengo dos gatos, pablo y jack y mi meta es poder hacer una pagina antes de mi cumple nro 30
+
+Franco tengo 25 años y soy de Vicente Lopez. Juego al basque desde muy chiquito. Tengo dos perros, Floyd y Tuca. Mi objetivo es poder trabajar en un futuro diseñando apps web.
