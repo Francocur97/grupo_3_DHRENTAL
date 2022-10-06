@@ -14,3 +14,5 @@ Augusto tengo 29 años soy de ramos mejia, toco la guitarra y estudio en digiral
 Franco tengo 25 años y soy de Vicente Lopez. Juego al basque desde muy chiquito. Tengo dos perros, Floyd y Tuca. Mi objetivo es poder trabajar en un futuro diseñando apps web.
 
 Francisco tengo 25 años soy de Adrogue, me gustael futbol y la electronica. Mi heroe es Naruto y mi meta es serprogramadorpara el año que viene.
+
+Eduardo Godoy, tengo 30 años, trabajo de clarkista y operario de deposito  y siempre quise aprender programacion.
