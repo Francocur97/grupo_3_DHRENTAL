@@ -1,0 +1,23 @@
+{
+  "name": "grupo_3_dhrental",
+  "version": "1.0.0",
+  "description": "Tematica del sitio y publico objetivo:\r En DHRENTAL nos dedicamos principalmente al alquiler y venta de equipos/instrumentos para todo tipo de eventos. Apuntamos al publico individual y corporativo.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Francocur97/grupo_3_DHRENTAL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Francocur97/grupo_3_DHRENTAL/issues"
+  },
+  "homepage": "https://github.com/Francocur97/grupo_3_DHRENTAL#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
