@@ -1,0 +1,234 @@
+/*Mobile First*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagenLogo {
+    width: 70%;
+}
+
+.logo {
+    width: 100%;
+}
+
+.menu-burger {
+    padding: 8px;
+    margin: 10px;
+    color: black;
+    border-radius: 30%;
+    border: 1px solid white;
+    background-color: white;
+    font-size: 20px;
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: none;
+    width: auto;
+    min-width: 20px;
+    min-height: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+    width: 100%;
+    margin-left: 11%;
+}
+
+main {
+    background-color: grey;
+    width: 100%;
+}
+
+.sectionLogin {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+.formlogin {
+    width: 80%;
+    background-color: white;
+    padding: 5%;
+    border: 1px white solid;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    margin-top: 10px;
+    color: gray;
+}
+
+input {
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.button {
+    margin-top: 20px;
+    color: white;
+    background-color: #0875AF;
+    border-radius: 5px;
+    width: 70%;
+    text-align: center;
+    align-self: center;
+    border: 1px solid #0875AF;
+    height: 30px;
+}
+
+.recuerdame {
+    margin-bottom: 10px;
+}
+
+.recuerdamelogin {
+    height: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #0875AF;
+    text-align: center;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+}
+
+.derechosReservados {
+    width: 100%;
+    color: white;
+    font-size: 80%;
+    text-align: center;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.iconosFooter {
+    color: white;
+    margin-top: 10px;
+}
+
+
+.contactos {
+    padding-top: 5px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media(min-width:576px) {
+
+    header{
+        text-align: center;
+        display: block;
+    }
+
+    .logo {
+        width: 40%;
+        text-align: center;
+    }
+
+    .menu-burger {
+        display: none;
+    }
+
+    .desktop{
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    li{
+        list-style: none;
+    }
+
+     ul li a {
+        text-decoration: none;
+        color: white;
+
+     } 
+
+     .sectionLogin{
+        width: 50%;
+        margin-left: 25%;
+     }
+
+     a{
+        margin-top: 10px;
+    }
+
+}
+
+@media(min-width:768px) {
+
+    .logo{
+        width: 30%;
+    }
+
+    .sectionLogin{
+        width: 50%;
+        margin-left: 25%;
+     }
+
+     a{
+        margin-top: 10px;
+    }
+
+}
+
+@media(min-width:1024px) {
+
+    .logo{
+        width: 20%;
+    }
+
+    .sectionLogin{
+        width: 30%;
+        margin-left: 35%;
+     }
+
+    a{
+        margin-top: 10px;
+    }
+
+}

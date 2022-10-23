@@ -1,12 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/7a47a530cb.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+
+
+    <title>Login</title>
+
 </head>
-<body><h1>login</h1>
+
+<body>
+
+    <header>
+
+        <a href="index" class="imagenLogo"><img class="logo" src="./images/logo.jpg" alt=""></a>
+            
+        <i class="fa-solid fa-bars menu-burger">
+            <nav class="mobile">
+                <ul class="">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Alquiler</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </i>
+        
+        <nav class="desktop">
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="productDetail">Productos</a></li>
+                <li><a href="productDetail">Alquiler</a></li>
+                <li><a href="nosotros">Nosotros</a></li>
+                <li><a href="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="sectionLogin">
+
+            <h1>Inicia Sesion:</h1>
+
+            <form class="formlogin">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+
+                <label for="contraseñaUsuario">Contraseña:</label>
+                <input type="password" name="contraseñaUsuario" required>
+
+                <label class="recuerdame"><input type="checkbox" class="recuerdamelogin">Recordarme</label>
+
+                <Button type="submit" class="button">Continuar</Button>
+
+                <a href="#">¿Olvidaste tu Contraseña?</a>
+
+                <a href="register">¡No tenes cuenta todavia?</a>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <section class="footer">
+
+            <h2 class="derechosReservados">Copyright © 1999-2022 Todos los derechos Reservados</h2>
+
+        <article class="contactos">
+
+            <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp iconosFooter"></i></a>
+        
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-instagram iconosFooter"></i></a>
+
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-facebook iconosFooter"></i></a>
+
+        </article>
+
+        </section>
     
+</footer>
+
 </body>
+
 </html>
