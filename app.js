@@ -27,3 +27,15 @@ app.get('/productCart',(req,res) => {
 app.get('/productDetail',(req,res) => {
     res.sendFile(path.resolve('./views/productDetail.html'))
 });
+
+app.get('/nosotros',(req,res) => {
+    res.sendFile(path.resolve('./views/nosotros.html'))
+});
+
+app.get('/contacto',(req,res) => {
+    res.sendFile(path.resolve('./views/contacto.html'))
+});
+
+app.get('*',(req,res) => {
+    res.sendFile(path.resolve('./views/error404.html'))
+});

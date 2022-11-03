@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
 
-
     <title>Login</title>
 
 </head>
@@ -23,25 +22,49 @@
 
     <header>
 
-        <a href="index" class="imagenLogo"><img class="logo" src="./images/logo.jpg" alt=""></a>
-            
-        <i class="fa-solid fa-bars menu-burger">
-            <nav class="mobile">
-                <ul class="">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Alquiler</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
+        <a href="/" class="imagenLogo"><img class="logo" src="./images/logo.jpg" alt=""></a>
+
+        <section class="section-header">
+
+            <a class="icono-header" href="productCart"><i class="fa-solid fa-cart-shopping"></i></i></a>
+            <a class="icono-header" href="login"><i class="fa-solid fa-user"></i></a>
+
+        </section>
+
+        <nav role="navigation" class="mobile">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="login">
+                        <li>Mi cuenta</li>
+                    </a>
+                    <a href="register">
+                        <li>Registrarse</li>
+                    </a>
+                    <a href="productCart">
+                        <li>Mi carrito</li>
+                    </a>
+                    <a href="productDetail">
+                        <li>Productos</li>
+                    </a>
+                    <a href="nosotros">
+                        <li>Nosotros</li>
+                    </a>
+                    <a href="contacto">
+                        <li>Contacto</li>
+                    </a>
                 </ul>
-            </nav>
-        </i>
-        
+            </div>
+        </nav>
+
         <nav class="desktop">
             <ul>
-                <li><a href="index">Home</a></li>
+                <li><a href="login">Ingresar</a></li>
+                <li><a href="register">Registrarse</a></li>
                 <li><a href="productDetail">Productos</a></li>
-                <li><a href="productDetail">Alquiler</a></li>
                 <li><a href="nosotros">Nosotros</a></li>
                 <li><a href="contacto">Contacto</a></li>
             </ul>
@@ -53,23 +76,23 @@
 
         <section class="sectionLogin">
 
-            <h1>Inicia Sesion:</h1>
+            <h1 class="titular-login">Inicia Sesion:</h1>
 
-            <form class="formlogin">
+            <form class="formlogin" action="#" method="post">
 
                 <label for="email">Email:</label>
-                <input type="email" name="email" required>
+                <input type="email" name="usuario-email" placeholder="usuario@gmail.com" id="email" required>
 
-                <label for="contraseñaUsuario">Contraseña:</label>
-                <input type="password" name="contraseñaUsuario" required>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" name="usuario-contraseña" id="contraseña" required>
 
                 <label class="recuerdame"><input type="checkbox" class="recuerdamelogin">Recordarme</label>
 
                 <Button type="submit" class="button">Continuar</Button>
 
-                <a href="#">¿Olvidaste tu Contraseña?</a>
+                <a class="texto-enlace" href="#">¿Olvidaste tu Contraseña?</a>
 
-                <a href="register">¡No tenes cuenta todavia?</a>
+                <a class="texto-enlace" href="register">¡No tenes cuenta todavia?</a>
 
             </form>
 
@@ -83,19 +106,19 @@
 
             <h2 class="derechosReservados">Copyright © 1999-2022 Todos los derechos Reservados</h2>
 
-        <article class="contactos">
+            <article class="contactos">
 
-            <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp iconosFooter"></i></a>
-        
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-instagram iconosFooter"></i></a>
+                <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp iconosFooter"></i></a>
 
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-facebook iconosFooter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-instagram iconosFooter"></i></a>
 
-        </article>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-facebook iconosFooter"></i></a>
+
+            </article>
 
         </section>
-    
-</footer>
+
+    </footer>
 
 </body>
 

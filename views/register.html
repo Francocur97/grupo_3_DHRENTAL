@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -21,25 +22,49 @@
 
     <header>
 
-        <a href="index" class="imagenLogo"><img class="logo" src="./images/logo.jpg" alt=""></a>
-            
-        <i class="fa-solid fa-bars menu-burger">
-            <nav class="mobile">
-                <ul class="">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Alquiler</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
+        <a href="/" class="imagenLogo"><img class="logo" src="./images/logo.jpg" alt=""></a>
+
+        <section class="section-header">
+
+            <a class="icono-header" href="productCart"><i class="fa-solid fa-cart-shopping"></i></i></a>
+            <a class="icono-header" href="login"><i class="fa-solid fa-user"></i></a>
+
+        </section>
+
+        <nav role="navigation" class="mobile">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="login">
+                        <li>Mi cuenta</li>
+                    </a>
+                    <a href="register">
+                        <li>Registrarse</li>
+                    </a>
+                    <a href="productCart">
+                        <li>Mi carrito</li>
+                    </a>
+                    <a href="productDetail">
+                        <li>Productos</li>
+                    </a>
+                    <a href="nosotros">
+                        <li>Nosotros</li>
+                    </a>
+                    <a href="contacto">
+                        <li>Contacto</li>
+                    </a>
                 </ul>
-            </nav>
-        </i>
-        
+            </div>
+        </nav>
+
         <nav class="desktop">
             <ul>
                 <li><a href="login">Ingresar</a></li>
+                <li><a href="register">Registrarse</a></li>
                 <li><a href="productDetail">Productos</a></li>
-                <li><a href="productDetail">Alquiler</a></li>
                 <li><a href="nosotros">Nosotros</a></li>
                 <li><a href="contacto">Contacto</a></li>
             </ul>
@@ -56,28 +81,29 @@
             <form class="formlogin">
 
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombreUsuario" required>
+                <input type="text" name="usuario-nombre" placeholder="Fulanito" id="nombre" required>
 
                 <label for="apellido">Apellido:</label>
-                <input type="text" name="apellidoUsuario" required>
+                <input type="text" name="usuario-apellido" placeholder="Cosme" id="apellido" required>
 
                 <label for="email">Email:</label>
-                <input type="email" name="emailUsuario" required>
+                <input type="email" name="usuario-email" placeholder="usuario@gmail.com" id="email" required>
 
                 <label for="contraseña">Contraseña:</label>
-                <input type="password" name="contraseñaUsuario">
+                <input type="password" name="usuario-contraseña" id="contraseña" required>
 
                 <label for="contraseña">Repetir Contraseña:</label>
-                <input type="password" name="contraseñaUsuario">
+                <input type="password" name="usuario-contraseña" id="contraseña" required>
 
                 <label for="domicilio">Domicilio:</label>
-                <input type="text" name="domicilioUsuario" required>
+                <input type="text" name="usuario-domicilio" placeholder="Avenida siempre viva 123" id="domicilio"
+                    required>
 
                 <label for="celular">Celular:</label>
-                <input type="tel" name="celularUsuario" required>
+                <input type="tel" name="usuario-celular" placeholder="1130254059" id="celular" required>
 
-                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-                <input type="date" name="fechaNacimientoUsuario" required>
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" name="usuario-fecha-nacimiento" id="fecha-nacimiento" value="1992-09-27" required>
 
                 <Button type="submit" class="button">Crear cuenta</Button>
 
@@ -93,18 +119,18 @@
 
             <h2 class="derechosReservados">Copyright © 1999-2022 Todos los derechos Reservados</h2>
 
-        <article class="contactos">
+            <article class="contactos">
 
-            <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp iconosFooter"></i></a>
-        
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-instagram iconosFooter"></i></a>
+                <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp iconosFooter"></i></a>
 
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-facebook iconosFooter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-instagram iconosFooter"></i></a>
 
-        </article>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-facebook iconosFooter"></i></a>
+
+            </article>
 
         </section>
-    
+
     </footer>
 
 </body>

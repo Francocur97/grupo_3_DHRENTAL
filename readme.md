@@ -1,5 +1,12 @@
 Tematica del sitio y publico objetivo:
-En DHRENTAL nos dedicamos principalmente al alquiler y venta de equipos/instrumentos para todo tipo de eventos. Apuntamos al publico individual y corporativo.
+
+En DHRENTAL nuestra misión es proporcionar,  a través de la venta y/ o alquiler,  el instrumento musical o equipo de sonido ideal que cualquier músico o sonidista necesite. 
+
+Nuestro público objetivo son músicos y sonidistas. 
+
+Además ofrecemos cobertura a empresas para sus eventos corporativos.
+
+
 
 Paginas de referencia:
 http://gluckrental.com/
@@ -10,13 +17,13 @@ https://www.famusic.com.ar/
 
 Integrantes:
 
-Augusto, tengo 29 años y soy de ramos Mejia, toco la guitarra y estudio en digital house, tengo dos gatos, pablo y jack y mi meta es poder hacer una pagina antes de mi cumple nro 30.
+Mi nombre es Augusto Alfaro Lopez. Tengo 29 años y soy de Ramos Mejía. Toco la guitarra y estudio en Digital House. Tengo dos gatos: Pablo y Jack y mi meta es poder hacer una página antes de mi cumple nro 30.
 
-Franco, tengo 25 años y soy de Vicente Lopez. Juego al basquet desde muy chiquito. Tengo dos perros, Floyd y Tuca. Mi objetivo es poder trabajar en un futuro diseñando apps web.
+Mi nombre es Franco Curzi. Tengo 25 años y soy de Vicente Lopez. Juego al basquet desde muy chiquito. Tengo dos perros: Floyd y Tuca. Mi objetivo es poder trabajar en un futuro diseñando apps web.
 
-Francisco, tengo 25 años y soy de Adrogue, me gusta el futbol y la electronica.Mi heroe es Naruto y mi meta es ser programador para el año que viene.
+Mi nombre es Francisco Hereñu. Tengo 25 años y soy de Adrogué. Me gusta el futbol y la electrónica. Mi heroe es Naruto y mi meta es ser programador para el año que viene.
 
-Eduardo Godoy, tengo 30 años, trabajo de clarkista y operario de deposito, siempre quise aprender programacion.
+Mi nombre es Eduardo Godoy. Tengo 30 años. Trabajo de clarkista y siempre quise aprender programación. Mientras estudio me acompaña mi hijo Benjamin que es recien nacido. El se recibe conmigo. En mis tiempos libres, disfruto mucho de jugar al Counter Strike. 
 
 Tablero de trabajo:
 https://trello.com/b/jntLJavl/dhrentals
