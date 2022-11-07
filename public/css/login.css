@@ -517,21 +517,26 @@ footer {
     width: 100%;
     border-bottom: solid darkgray 3px;
     justify-content: space-between;
+    text-align: center;
 }
 
 .card2 {
     width: 100%;
     border-bottom: solid darkgray 3px;
     justify-content: space-between;
+    text-align: center;
 }
 
-.unir {
+div .unir {
     display: flex;
+    justify-content: center;
 }
 
 .imgcart {
     width: 20%;
-    padding: 10px
+    padding: 10px;
+    border-radius: 10%;
+    
 }
 
 .btns {
@@ -551,6 +556,7 @@ footer {
 .total {
     width: 45%;
     text-align: right;
+    margin: 5px;
 }
 
 
