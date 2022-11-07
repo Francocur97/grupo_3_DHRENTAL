@@ -509,3 +509,65 @@ footer {
         margin-left: 35%;
     }
 }
+
+/* CART */
+
+
+.card {
+    width: 100%;
+    border-bottom: solid darkgray 3px;
+    justify-content: space-between;
+}
+
+.card2 {
+    width: 100%;
+    border-bottom: solid darkgray 3px;
+    justify-content: space-between;
+}
+
+.unir {
+    display: flex;
+}
+
+.imgcart {
+    width: 20%;
+    padding: 10px
+}
+
+.btns {
+    align-self: flex-end;
+}
+
+.btn {
+    height: 20% ;
+    padding: 5px;
+}
+
+.block {
+    display: block;
+    padding: 20px;
+}
+
+.total {
+    width: 45%;
+    text-align: right;
+}
+
+
+/* PRODUCT DETAIL */
+
+.img {
+    text-align: center;
+    border: 2px solid red;
+    margin: 10px;
+}
+
+.imgbata {
+    width: 30%;
+    
+}
+
+div .descrip p {
+    text-align: center;
+}
+
