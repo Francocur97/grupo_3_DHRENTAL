@@ -556,18 +556,11 @@ footer {
 
 /* PRODUCT DETAIL */
 
-.img {
-    text-align: center;
-    border: 2px solid red;
-    margin: 10px;
-}
 
 .imgbata {
-    width: 30%;
-    
 }
 
-div .descrip p {
+.descrip {
     text-align: center;
 }
 
