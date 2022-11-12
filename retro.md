@@ -1,7 +1,13 @@
-Sprint 1:
-1. Comenzar a hacer: empezar a analizar las paginas y apps que utilizo diaramente con un ojo de punto de vista del diseño para asi poder realizar y diseñar mejores cosas
-2. Hacer más: mas bocetos para llegar a un producto mejor terminado y detallado
-3. Continuar haciendo: el trabajo en equipo que ayuda a tener mejores resultados por los distintos puntos de vista del resto de los compañeros
-4. Hacer menos: procrastinacion con respecto al trabajo en equipo
-5. Dejar de hacer: las cosas desprolijas y armar codigos mas lejibles
+Conclusiones Sprint 1:
+1. Comenzar a hacer: Juntarnos mas en discord.
+2. Hacer más: Ponernos mas de acuerdo con el trabajo.
+3. Continuar haciendo: Aunque no nos juntamos mucho, la comunicacion fue excelente.
+4. Hacer menos: Largon periodos de inactividad en el proyecto.
+5. Dejar de hacer: Primero boceto, despues codigo.
 
+Conclusiones Sprint 2:
+1. Comenzar a hacer: Analizar las paginas y apps que utilizo diaramente con una mirada crítica desde la experiencia de usuario y el diseño, para luego poder tomar ideas y diseñar mejor.
+2. Hacer más: Más práctica para llegar a un producto mejor terminado y con ajustes en los pequeños detalles.
+3. Continuar haciendo: el trabajo en equipo ayuda a tener mejores resultados por el aporte que enriquece las observaciones del resto de los compañeros.
+4. Hacer menos: procrastinacion con respecto al trabajo en equipo.
+5. Dejar de hacer: las cosas desprolijas y códigos inncesariamente complejos.
