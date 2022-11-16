@@ -6,8 +6,6 @@ Nuestro público objetivo son músicos y sonidistas.
 
 Además ofrecemos cobertura a empresas para sus eventos corporativos.
 
-
-
 Paginas de referencia:
 http://gluckrental.com/
 https://www.180gradoseventos.com.ar/

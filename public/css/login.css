@@ -276,7 +276,7 @@ label {
     color: gray;
 }
 
-input {
+.input-form {
     height: 35px;
     border: 1px solid gray;
     border-radius: 5px;
@@ -371,6 +371,10 @@ footer {
     font-style: italic;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.input-producto{
+    border-radius: 5px;
 }
 
 @media(min-width:480px) {

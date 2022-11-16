@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
 
-    <title>Detalle de producto</title>
+    <title>Register</title>
 
 </head>
 
@@ -50,11 +50,14 @@
                     <a href="productDetail">
                         <li>Productos</li>
                     </a>
-                    <a href="nosotros">
+                    <a href="us">
                         <li>Nosotros</li>
                     </a>
-                    <a href="contacto">
+                    <a href="contact">
                         <li>Contacto</li>
+                    </a>
+                    <a href="productCreate">
+                        <li>Agregar Producto</li>
                     </a>
                 </ul>
             </div>
@@ -62,11 +65,14 @@
 
         <nav class="desktop">
             <ul>
+
                 <li><a href="login">Ingresar</a></li>
                 <li><a href="register">Registrarse</a></li>
                 <li><a href="productDetail">Productos</a></li>
-                <li><a href="nosotros">Nosotros</a></li>
-                <li><a href="contacto">Contacto</a></li>
+                <li><a href="us">Nosotros</a></li>
+                <li><a href="contact">Contacto</a></li>
+                <li><a href="productCreate">Agregar Producto</a></li>
+                
             </ul>
         </nav>
 
@@ -74,15 +80,42 @@
 
     <main>
 
+        <section class="sectionLogin">
 
-        <div class="descrip">
-            <div class=imgbata>
-                <img src="images/bateria.jpg" width="30%">
-                <p>$50.000</p>
-                <p>BATERIA</p>
-                <p>bateria de 5 cuerpos platillos y banqueta</p>
-            </div>
-        </div>
+            <h1 class="titular-login">Crear cuenta:</h1>
+
+            <form class="formlogin">
+
+                <label for="nombre">Nombre:</label>
+                <input class="input-form" type="text" name="usuario-nombre" placeholder="Fulanito" id="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input class="input-form" type="text" name="usuario-apellido" placeholder="Cosme" id="apellido" required>
+
+                <label for="email">Email:</label>
+                <input class="input-form" type="email" name="usuario-email" placeholder="usuario@gmail.com" id="email" required>
+
+                <label for="contraseña">Contraseña:</label>
+                <input class="input-form" type="password" name="usuario-contraseña" id="contraseña" required>
+
+                <label for="contraseña">Repetir Contraseña:</label>
+                <input class="input-form" type="password" name="usuario-contraseña" id="contraseña" required>
+
+                <label for="domicilio">Domicilio:</label>
+                <input class="input-form" type="text" name="usuario-domicilio" placeholder="Avenida siempre viva 123" id="domicilio"
+                    required>
+
+                <label for="celular">Celular:</label>
+                <input class="input-form" type="tel" name="usuario-celular" placeholder="1130254059" id="celular" required>
+
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input class="input-form" type="date" name="usuario-fecha-nacimiento" id="fecha-nacimiento" value="1992-09-27" required>
+
+                <Button type="submit" class="button">Crear cuenta</Button>
+
+            </form>
+
+        </section>
 
     </main>
 

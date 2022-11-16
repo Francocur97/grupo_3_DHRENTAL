@@ -11,3 +11,10 @@ Conclusiones Sprint 2:
 3. Continuar haciendo: el trabajo en equipo ayuda a tener mejores resultados por el aporte que enriquece las observaciones del resto de los compañeros.
 4. Hacer menos: procrastinacion con respecto al trabajo en equipo.
 5. Dejar de hacer: las cosas desprolijas y códigos inncesariamente complejos.
+
+Conclusiones Sprint 3 :
+1. Comenzar a hacer:
+2. Hacer más:
+3. Continuar haciendo:
+4. Hacer menos:
+5. Dejar de hacer:
