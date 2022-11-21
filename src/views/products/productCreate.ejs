@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head.ejs') %> 
+<%- include('../partials/head.ejs') %>
 
 <body>
 
-    <%- include('../partials/header.ejs') %> 
+    <%- include('../partials/header.ejs') %>
 
-    <main>
+    <main class="main-form">
 
         <section class="sectionLogin">
 
             <h1 class="titular-login">Crear</h1>
 
-            <form class="formlogin">
+            <form class="formlogin" action="/products/create" method="post" enctype="multipart/form-data">
 
                 <label for="imagen">Imagen</label>
-                <input class="input-producto" type="file" name="producto-imagen" id="imagen" required>
+                <input class="input-producto" type="file" name="imagen" id="imagen" accept=".png, .jpg" required>
 
                 <label for="titulo">Titulo:</label>
-                <input class="input-producto" type="text" name="producto-titulo" id="titulo" required>
+                <input class="input-producto" type="text" name="titulo" id="titulo" required>
 
                 <label for="descripcion">Descripcion:</label>
-                <textarea class="input-producto"  name="producto-descripcion" id="descripcion" cols="30" rows="5" placeholder="Agregar descripcion del producto..."></textarea>
+                <textarea class="input-producto" name="descripcion" id="descripcion" cols="30" rows="5"
+                    placeholder="Agregar descripcion del producto..."></textarea>
 
                 <label for="precio">Precio:</label>
-                <input class="input-producto" type="text" name="producto-precio" id="precio" required>
+                <input class="input-producto" type="text" name="precio" id="precio" required>
+
+                <label for="oferta" class="form-label">Producto en oferta:</label>
+                <select name="oferta" id="oferta" class="form-input">
+                    <option value="">Elegí</option>
+                    <option value="No">No</option>
+                    <option value="En-oferta">En oferta</option>
+                </select>
+
+                <label for="categoria" class="form-label">Categoría:</label>
+                <select name="categoria" id="categoria" class="form-input">
+                    <option value="baterias">Baterias</option>
+                    <option value="guitarras">Guitarras</option>
+                    <option value="bajos">Bajos</option>
+                    <option value="equipos-de-sonido-consola">Equipos de sonido/Consolas</option>
+
+                </select>
 
                 <Button type="submit" class="button">Crear producto</Button>
 
-                
+
 
             </form>
 
@@ -37,7 +54,7 @@
 
     </main>
 
-    <%- include('../partials/footer.ejs') %> 
+    <%- include('../partials/footer.ejs') %>
 
 </body>
 

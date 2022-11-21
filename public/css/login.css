@@ -194,6 +194,10 @@ main {
     position: relative;
 }
 
+.main-form{
+    width: 100%;
+}
+
 .sectionLogin {
     display: flex;
     flex-direction: column;
@@ -314,6 +318,7 @@ footer {
     width: 100%;
     padding-bottom: 20px;
     padding-top: 20px;
+    height: 15em;
 
 }
 
@@ -593,14 +598,4 @@ div .unir {
     width: 45%;
     text-align: right;
     margin: 5px;
-}
-
-
-/* PRODUCT DETAIL */
-
-
-.imgbata {}
-
-.descrip {
-    text-align: center;
 }

@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head.ejs') %> 
+    <%- include('../partials/head.ejs')%> 
 
 <body>
 
-    <%- include('../partials/header.ejs') %> 
+   <%- include('../partials/header.ejs') %> 
     
-    <main>
+    <main class="main-form">
 
+        <section class="seccion-detalle">
+            <article class="tarjeta-detalle">
+                
+                <img class="imagen-detalle" src="/images/products/<%= product.imagen %>">
+                <div>
+                    <h2 class="titular-detalle"><%= product.nombre %></h2>
+                    <p class="detalle">Detalle: <%= product.descripcion %></p>
+                    <p class="detalle">Precio: $<%= product.precio %></p>
 
-        <div class="descrip">
-            <div class=imgbata>
-                <img src="images/bateria.jpg" width="30%">
-                <p>$50.000</p>
-                <p>BATERIA</p>
-                <p>bateria de 5 cuerpos platillos y banqueta</p>
-            </div>
-        </div>
+                    <a href="#">
+                        <button class="boton-detalle" type="submit">Comprar</button>
+                    </a>    
+                    
+                </div>
+            </article>
+            <section class="form-detalle">
+
+               <a class="boton-detalle" href="/products/productEdit/<%= product.id %>">Editar</a>
+
+                <form action="/products/<%= product.id %>?_method=delete" method="post">
+                    <button class="boton-detalle" type="submit">Eliminar</button>
+                </form>
+
+            </section>
+        </section>
 
     </main>
 
