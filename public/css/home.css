@@ -182,4 +182,7 @@ main {
     .detalle{
         text-align: center;
     }
+    .imagen-detalleñ{
+        width: 100%;
+    }
 }

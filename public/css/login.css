@@ -146,6 +146,7 @@ header {
 
 .section-header {
     display: none;
+    margin-top: 15px;
 }
 
 .imagenLogo {
