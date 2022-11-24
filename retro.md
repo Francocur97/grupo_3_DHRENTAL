@@ -13,8 +13,8 @@ Conclusiones Sprint 2:
 5. Dejar de hacer: las cosas desprolijas y códigos inncesariamente complejos.
 
 Conclusiones Sprint 3 :
-1. Comenzar a hacer:
-2. Hacer más:
+1. Comenzar a hacer: Mas comunicacion en el equipo.
+2. Hacer más: 
 3. Continuar haciendo:
 4. Hacer menos:
 5. Dejar de hacer:
