@@ -1,7 +1,19 @@
+const path = require('path');
+const fs = require('fs');
+
+const productsFilePath = path.join(__dirname + '../../database/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
+const inSale = products.filter(function(product){
+
+	return product.oferta == "En oferta";
+
+});
 
 const controllers = {
     index: (req,res) => {
-        res.render('index')
+        res.render('index',{inSale});
     },
     contact: (req,res) => {
         res.render('contact')

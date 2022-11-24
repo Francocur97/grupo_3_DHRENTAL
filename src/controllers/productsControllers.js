@@ -8,75 +8,59 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controllers = {
 
-  // controlador que lleva a todos los productos creados.
+  
   products: (req, res) => {
-
-    res.render('./products/products', {
-      products
-    })
+// controlador que lleva a todos los productos creados.
+    res.render('./products/products', {products});
 
   },
 
-  //controlador que lleva a la vista de creacion del producto
   productCreate: (req, res) => {
+//controlador que lleva a la vista de creacion del producto
     res.render('./products/productCreate');
+
   },
 
-  //controlador que guarda el producto
   store: (req, res) => {
-
+//controlador que guarda el producto
     let newProduct = {
-      id: randomUUID(),
-      imagen: req.file.filename,
-      nombre: req.body.titulo,
-      descripcion: req.body.descripcion,
-      precio: req.body.precio,
-      categoria: req.body.categoria,
-      oferta: req.body.oferta
+      "id": products[products.length -1]["id"]+1,
+      "imagen": req.file.filename,
+      "nombre": req.body.titulo,
+      "descripcion": req.body.descripcion,
+      "precio": req.body.precio,
+      "categoria": req.body.categoria,
+      "oferta": req.body.oferta
     }
 
-    let products = fs.readFileSync(__dirname + '../../database/products.json', {
-      encoding: 'utf-8'
-    });
+    products.push(newProduct);
 
-    let productJson;
-    if (products == '') {
-      productJson = [];
-    } else {
-      productJson = JSON.parse(products);
-    }
-
-    productJson.push(newProduct);
-
-    let newProductJson = JSON.stringify(productJson);
-
-    fs.writeFileSync(__dirname + '../../database/products.json', newProductJson);
+		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,''));
 
     res.redirect('/');
 
   },
 
-  //controlador de pagina de edicion del producto
-  productEdit: (req, res) => {
-
+ productEdit: (req, res) => {
+ //controlador de pagina de edicion del producto
     let product = products.find(product =>
       product.id == req.params.id);
-    res.render('./products/productEdit', {product})
+    res.render('./products/productEdit', {product});
 
   },
 
-  //controlador de detalle del producto en particular
+ 
   productDetail: (req, res) => {
-    let product = products.find(product =>
+     //controlador de detalle del producto en particular
+      let product = products.find(product =>
       product.id == req.params.id);
-    res.render('./products/productDetail', {
-      product
-    })
+    res.render('./products/productDetail', {product});
 
   },
 
-  //controlador del carrito de compras
+  
   productCart: (req, res) => {
+  //controlador del carrito de compras
     res.render('./products/productCart')
   },
 

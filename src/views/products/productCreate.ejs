@@ -13,7 +13,7 @@
 
             <h1 class="titular-login">Crear</h1>
 
-            <form class="formlogin" action="/products/create" method="post" enctype="multipart/form-data">
+            <form class="formlogin" action="/products/create" method="POST" enctype="multipart/form-data">
 
                 <label for="imagen">Imagen</label>
                 <input class="input-producto" type="file" name="imagen" id="imagen" accept=".png, .jpg" required>
@@ -26,7 +26,7 @@
                     placeholder="Agregar descripcion del producto..."></textarea>
 
                 <label for="precio">Precio:</label>
-                <input class="input-producto" type="text" name="precio" id="precio" required>
+                <input class="input-producto" type="number" name="precio" id="precio" required>
 
                 <label for="oferta" class="form-label">Producto en oferta:</label>
                 <select name="oferta" id="oferta" class="form-input">
