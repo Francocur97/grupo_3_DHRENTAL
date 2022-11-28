@@ -7,4 +7,4 @@ const usersControllers =  require('../controllers/usersControllers');
 router.get('/login',usersControllers.login);
 router.get('/register',usersControllers.register);
 
-module.exports = router ;
+module.exports = router;

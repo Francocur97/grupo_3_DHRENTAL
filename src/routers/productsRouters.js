@@ -37,8 +37,10 @@ router.get('/products',productsControllers.products)
 router.get('/productCart',productsControllers.productCart);
 //ruta q lleva a la edicion del producto en particular
 router.get('/productEdit/:id',productsControllers.productEdit);
+//ruta q actualiza el producto en particular
+router.put('/productEdit/:id',upload.single('imagen'),productsControllers.update);
 //ruta q lleva al borrado del producto en particular
-router.delete('/:id', productsControllers.delete);
+router.delete('/delete/:id', productsControllers.delete);
 
 
 module.exports = router ;

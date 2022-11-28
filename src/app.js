@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+
 const routersMain = require('./routers/mainRouters');
 const routersUsers = require('./routers/usersRouters');
 const routersProducts = require('./routers/productsRouters');
@@ -22,6 +23,7 @@ app.use('/', routersMain);
 app.use('/users', routersUsers);
 app.use('/products', routersProducts);
 
-app.get('*', (req, res) => {
-    res.render('error404')
+
+app.use((req, res, next) => {
+    res.status(404).render('error404');
 });

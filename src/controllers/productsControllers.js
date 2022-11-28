@@ -8,7 +8,6 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controllers = {
 
-  
   products: (req, res) => {
 // controlador que lleva a todos los productos creados.
     res.render('./products/products', {products});
@@ -78,7 +77,31 @@ const controllers = {
 
     res.redirect('/');
 
+  },
+  update: (req,res) => {
+    let product = products.find(product => product.id == req.params.id);
+
+    let newProduct = {
+      "id": product.id,
+      "nombre": req.body.titulo,
+      "descripcion": req.body.descripcion,
+      "precio": req.body.precio,
+      "categoria": req.body.categoria,
+      "oferta": req.body.oferta
+    }
+
+		let productToEdit = products.map(product => {
+			if(newProduct.id == product.id) {
+		return	product = newProduct  
+	}
+		return product
+	}) 
+
+  fs.writeFileSync(productsFilePath, JSON.stringify(productToEdit, null, ''))
+
+	res.redirect('/')
   }
+
 };
 
 module.exports = controllers;

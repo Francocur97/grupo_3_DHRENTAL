@@ -13,8 +13,8 @@ Conclusiones Sprint 2:
 5. Dejar de hacer: las cosas desprolijas y códigos inncesariamente complejos.
 
 Conclusiones Sprint 3 :
-1. Comenzar a hacer: Mas comunicacion en el equipo.
-2. Hacer más: 
-3. Continuar haciendo:
-4. Hacer menos:
-5. Dejar de hacer:
+1. Comenzar a hacer: Si se hace la carpeta raiz y el proyecto en ingles, hacerlo todo en ingles(ejemplo, en html las clases algunas estan en español y otras en ingles).
+2. Hacer más: Más comunicacion en el equipo.
+3. Continuar haciendo: Trabajar en el proyecto continuamente.
+4. Hacer menos: No escribir codigo sin saber la lógica a implementar primero.
+5. Dejar de hacer: Dejar de hacer divs (mejor semántica).

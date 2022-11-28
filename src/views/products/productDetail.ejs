@@ -28,7 +28,7 @@
 
                <a class="boton-detalle" href="/products/productEdit/<%= product.id %>">Editar</a>
 
-                <form action="/products/<%= product.id %>?_method=delete" method="post">
+                <form action="/products/delete/<%= product.id %>?_method=delete" method="post">
                     <button class="boton-detalle" type="submit">Eliminar</button>
                 </form>
 
