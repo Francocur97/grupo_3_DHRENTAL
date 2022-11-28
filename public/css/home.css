@@ -1,3 +1,7 @@
+*{
+    font-family: oswald;
+}
+
 .titulares-home {
     text-align: center;
     color: black;
@@ -29,20 +33,26 @@ main {
     width: 100%;
 }
 
+
 .articulo-destacado {
-    background-color: white;
+    background-color: rgb(247, 224, 224);
     margin-bottom: 20px;
     border: 1px solid black;
     position: relative;
-    box-shadow: -1px 0px 31px 0px rgba(0, 0, 0, 1);
-    -webkit-box-shadow: -1px 0px 31px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow: -1px 0px 31px 0px rgba(0, 0, 0, 1);
+    transition: 1s;
+}
 
+.articulo-destacado:hover {
+    box-shadow: 0px 0px 29px -2px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 0px 0px 29px -2px rgba(0,0,0,0.58);
+    -moz-box-shadow: 0px 0px 29px -2px rgba(0,0,0,0.58);;
 }
 
 .descripcion {
     font-size: 20px;
+    padding:5px;
     padding-left: 20px;
+    padding-bottom: 5px ;
 }
 
 .seccion-detalle{
