@@ -1,46 +1,16 @@
-
 const express = require('express');
-const path = require ('path');
 const router = express.Router();
-const multer = require('multer');
 
 const productsControllers =  require('../controllers/productsControllers');
+const upload = require('../middlewares/productsMulter');
 
-const storage = multer.diskStorage({
+router.get('/products', productsControllers.products); // RUTA DE TODOS LOS PRODUCTOS
+router.get('/productCreate', productsControllers.productCreate); // RUTA DE RENDERIZADO DE PAGINA DE CREACION DE PRODUCTO
+router.post('/create', upload.single('imagen'), productsControllers.store); // CREA O GUARDA EL PRODUCTO
+router.get('/productDetail/:id', productsControllers.productDetail); // RUTA DEL DETALLE DEL PRODUCTO POR SU ID
+router.get('/productEdit/:id', productsControllers.productEdit); // RUTA QUE RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO POR SU ID
+router.put('/productEdit/:id', upload.single('imagen'),productsControllers.update); // RUTA QUE REEMPLAZA EL PRODUCTO
+router.delete('/delete/:id', productsControllers.delete); // RUTA QUE ELIMINA EL PRODUCTO POR SU ID
+router.get('/productCart', productsControllers.productCart); // RUTA DEL CARRITO DE COMPRAS
 
-    destination: (req, file, callback) => {
-
-        let folder = path.join(__dirname, '../../public/images/products');
-        callback(null,folder);
-
-    },
-    filename: (req, file, callback) => {
-
-        let imageName = 'product-' + Date.now() + path.extname(file.originalname);
-        callback(null,imageName);
-
-    }
-
-});
-
-let upload = multer ({ storage : storage });
-
-//ruta de la vista de la creacion del producto
-router.get('/productCreate',productsControllers.productCreate);
-//ruta de la creacion del producto
-router.post('/create',upload.single('imagen'),productsControllers.store);
-//ruta de la vista del detalle de cada producto
-router.get('/productDetail/:id',productsControllers.productDetail);
-//ruta de la vista de todos los productos
-router.get('/products',productsControllers.products)
-//ruta del carrito de compras
-router.get('/productCart',productsControllers.productCart);
-//ruta q lleva a la edicion del producto en particular
-router.get('/productEdit/:id',productsControllers.productEdit);
-//ruta q actualiza el producto en particular
-router.put('/productEdit/:id',upload.single('imagen'),productsControllers.update);
-//ruta q lleva al borrado del producto en particular
-router.delete('/delete/:id', productsControllers.delete);
-
-
-module.exports = router ;
+module.exports = router;

@@ -4,20 +4,30 @@
 
     <section class="section-header">
 
-        <a class="icono-header" href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></i></a>
-        <a class="icono-header" href="/users/login"><i class="fa-solid fa-user"></i></a>
-
+        <% if (locals.isLogged) { %>
+            <a class="icono-header1" href="/users/profile"><img class="imagen-usuario" src="/images/users/<%= locals.userLogged.imagen %>" alt=""></a>
+            <a class="icono-header2" href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></i></a>
+            <a class="icono-header2" href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+        <% } %>
+        
+       
+        
     </section>
 
     <nav role="navigation" class="mobile">
         <div id="menuToggle">
-            <input type="checkbox" />
+            <input type="checkbox"/>
             <span></span>
             <span></span>
             <span></span>
             <ul id="menu">
+                <% if (locals.isLogged) { %>
+                    <a href="/users/Profile">
+                        <li>Mi cuenta</li>
+                    </a>
+                <% } %>
                 <a href="/users/login">
-                    <li>Mi cuenta</li>
+                    <li>Iniciar sesion</li>
                 </a>
                 <a href="/users/register">
                     <li>Registrarse</li>
@@ -37,6 +47,12 @@
                 <a href="/products/productCreate">
                     <li>Agregar Producto</li>
                 </a>
+                <a href="/users/users">
+                    <li>Usuarios</li>
+                </a>
+                <a href="/users/logout">
+                    <li>Salir</li>
+                </a>
             </ul>
         </div>
     </nav>
@@ -50,6 +66,7 @@
             <li><a href="/us">Nosotros</a></li>
             <li><a href="/contact">Contacto</a></li>
             <li><a href="/products/productCreate">Agregar Producto</a></li>
+            <li><a href="/users/users">Usuarios</a></li>
             
         </ul>
     </nav>

@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: oswald;
+
+}
+
 nav a:hover {
     color: grey;
 }
@@ -124,13 +132,6 @@ nav a:hover {
 
 /*Mobile First*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Bebas Neue', cursive;
-
-}
 
 body {
     background-color: gray;
@@ -227,7 +228,6 @@ main {
     font-size: 76px;
     color: white;
     text-align: center;
-    font-style: italic;
 }
 
 .subtitulo-contacto {
@@ -256,7 +256,6 @@ main {
     color: white;
     width: 80%;
     margin-left: 10%;
-
     padding-top: 10px;
     padding-bottom: 20px;
     font-style: italic;
@@ -374,7 +373,6 @@ footer {
     font-size: 25px;
     color: white;
     text-align: center;
-    font-style: italic;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -399,13 +397,28 @@ footer {
         right: 0;
     }
 
-    .icono-header {
-        padding: 10px;
+    .icono-header2 {
+        padding: 15px;
         border: 1px solid white;
         color: white;
-        border-radius: 5px;
-        margin-right: 10%;
+        border-radius: 50%;
+        margin-right: 5px;
+        height: fit-content;
     }
+
+    .icono-header1 {
+
+        border-radius: 50%;
+        margin-right: 37px;
+        width: 10%;
+        height: fit-content;
+    }
+
+    .imagen-usuario{
+        width: 50px;
+        border-radius: 50%;
+    }
+
 
     .mobile {
         display: none;
@@ -482,7 +495,6 @@ footer {
         font-size: 76px;
         color: white;
         text-align: center;
-        margin-top: 150px;
         font-weight: 100;
     }
 

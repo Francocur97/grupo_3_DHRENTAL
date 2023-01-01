@@ -1,2 +1,2 @@
-Tipografia: Bebas Neue
+Tipografia: oswald.
 Colores: Blanco,negro y gris.

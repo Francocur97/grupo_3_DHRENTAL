@@ -93,6 +93,7 @@ main {
     align-self: center;
     border: 1px solid #0875AF;
     height: 30px;
+    text-decoration: none;
 }
 
 .form-detalle{
@@ -113,6 +114,14 @@ main {
 .div-detalle{
     width: 100%;
     text-align: center;
+}
+
+.mensaje-error{
+    color: red;
+}
+
+.is-invalid{
+    border: 2px solid red;
 }
 
 @media(min-width:480px) {
