@@ -5,7 +5,7 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
-const cookies = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 
 // ROUTERS
 
@@ -19,13 +19,15 @@ const routersProducts = require('./routers/productsRouters');
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(cookies());
+
+app.use(cookieParser());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended : false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(session({ secret:'secret', resave:false, saveUninitialized:false,}));
 app.use(userLoggedMiddleware);
+
 
 
 app.listen(3000, () => {

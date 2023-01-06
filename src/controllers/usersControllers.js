@@ -71,7 +71,7 @@ const controllers = {
     },
 
     findAll: (req, res) => {
-
+            
         res.render('./users/users', {users}); //PAGINA QUE MUESTRA A TODOS LOS USUARIOS
 
     },
@@ -150,7 +150,7 @@ const controllers = {
             req.session.userLogged = userToLogin;
 
             if(req.body.remember){
-                res.cookie('email', req.body.email, { maxAger: 10000 * 30 });
+                res.cookie('email', req.body.email, { maxAge: 10000 * 30 });
             }
             return res.redirect('./profile');
           }

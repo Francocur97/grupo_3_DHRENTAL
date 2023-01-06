@@ -67,6 +67,8 @@ const controllers = {
     let product = products.filter(product => product.id != productDelete);
 
     let productStore = JSON.stringify(product);
+    
+    //fs.unlinkSync(path.resolve('./public/images/products/' + product[0].imagen));
 
     fs.writeFileSync(__dirname + '../../database/products.json', productStore);
 

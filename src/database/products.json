@@ -7,4 +7,12 @@
     "domicilio": "Avenida congreso 2563",
     "celular": "1164692686",
     "imagen": "user-1672347552284.jpg"
+}, {
+    "id": 2,
+    "imagen": "product-1672964563648.jpg",
+    "nombre": "aa",
+    "descripcion": "aa",
+    "precio": "1",
+    "categoria": "guitarras",
+    "oferta": "No"
 }]

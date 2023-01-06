@@ -47,9 +47,11 @@
                 <a href="/products/productCreate">
                     <li>Agregar Producto</li>
                 </a>
+                <% if (locals.admin) { %>
                 <a href="/users/users">
                     <li>Usuarios</li>
                 </a>
+                <% } %>
                 <a href="/users/logout">
                     <li>Salir</li>
                 </a>
@@ -66,8 +68,10 @@
             <li><a href="/us">Nosotros</a></li>
             <li><a href="/contact">Contacto</a></li>
             <li><a href="/products/productCreate">Agregar Producto</a></li>
+            <% if (locals.isLogged && locals.admin) { %>
             <li><a href="/users/users">Usuarios</a></li>
-            
+             <% } %>
+           
         </ul>
     </nav>
 
