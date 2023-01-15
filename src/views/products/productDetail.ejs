@@ -23,16 +23,18 @@
                     </a>    
                     
                 </div>
-            </article>
+            </article> 
+            <% if (locals.isLogged && locals.admin) { %>
             <section class="form-detalle">
-
+               
                <a class="boton-detalle" href="/products/productEdit/<%= product.id %>">Editar</a>
-
+               
                 <form action="/products/delete/<%= product.id %>?_method=delete" method="post">
                     <button class="boton-detalle" type="submit">Eliminar</button>
                 </form>
 
             </section>
+            <% } %> 
         </section>
 
     </main>

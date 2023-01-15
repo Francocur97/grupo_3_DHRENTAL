@@ -26,15 +26,19 @@
                         <li>Mi cuenta</li>
                     </a>
                 <% } %>
+                <% if (!locals.isLogged) { %>
                 <a href="/users/login">
                     <li>Iniciar sesion</li>
                 </a>
                 <a href="/users/register">
                     <li>Registrarse</li>
                 </a>
+                <% } %>
+                <% if (locals.isLogged) { %>
                 <a href="/products/productCart">
                     <li>Mi carrito</li>
                 </a>
+                <% } %>
                 <a href="/products/products">
                     <li>Productos</li>
                 </a>
@@ -44,10 +48,10 @@
                 <a href="/contact">
                     <li>Contacto</li>
                 </a>
+                <% if (locals.isLogged && locals.admin) { %>
                 <a href="/products/productCreate">
                     <li>Agregar Producto</li>
                 </a>
-                <% if (locals.admin) { %>
                 <a href="/users/users">
                     <li>Usuarios</li>
                 </a>
@@ -61,14 +65,15 @@
 
     <nav class="desktop">
         <ul>
-
+            <% if (!locals.isLogged) { %>
             <li><a href="/users/login">Ingresar</a></li>
             <li><a href="/users/register">Registrarse</a></li>
+            <% } %>
             <li><a href="/products/products">Productos</a></li>
             <li><a href="/us">Nosotros</a></li>
             <li><a href="/contact">Contacto</a></li>
-            <li><a href="/products/productCreate">Agregar Producto</a></li>
             <% if (locals.isLogged && locals.admin) { %>
+            <li><a href="/products/productCreate">Agregar Producto</a></li>
             <li><a href="/users/users">Usuarios</a></li>
              <% } %>
            

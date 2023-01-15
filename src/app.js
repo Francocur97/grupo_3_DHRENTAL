@@ -25,7 +25,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended : false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(session({ secret:'secret', resave:false, saveUninitialized:false,}));
+app.use(session({ secret:'secret', resave:false, saveUninitialized:false}));
 app.use(userLoggedMiddleware);
 
 

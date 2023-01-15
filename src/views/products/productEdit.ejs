@@ -22,20 +22,20 @@
                 <input class="input-producto" type="text" name="titulo" id="titulo" placeholder="<%= product.nombre %>" value="<%= product.nombre %>" required>
 
                 <label for="descripcion">Descripcion:</label> 
-                <textarea class="input-producto"  name="descripcion" id="descripcion" cols="30" rows="5" placeholder="<%= product.descripcion %>" value="<%= product.descripcion %>"><%= product.descripcion %></textarea>
+                <textarea class="input-producto"  name="descripcion" id="descripcion" cols="30" rows="5" placeholder="<%= product.descripcion %>" value="<%= product.descripcion %>" required ><%= product.descripcion %></textarea>
 
                 <label for="precio">Precio:</label>
                 <input class="input-producto" type="number" name="precio" id="precio" placeholder="<%= product.precio %>" value="<%= product.precio %>" required>
 
                 <label for="oferta" class="form-label">Producto en oferta:</label>
-                <select name="oferta" id="oferta" class="form-input">
+                <select name="oferta" id="oferta" class="form-input" required>
                     <option value="<%= product.oferta %>"></option>
                     <option value="<%= product.oferta %>">No</option>
                     <option value="<%= product.oferta %>">En oferta</option>
                 </select>
 
                 <label for="categoria" class="form-label">Categoría:</label>
-                <select name="categoria" id="categoria" class="form-input">
+                <select name="categoria" id="categoria" class="form-input" required>
                     <option value="<%= product.categoria %>"></option>
                     <option value="<%= product.categoria %>">Baterias</option>
                     <option value="<%= product.categoria %>">Guitarras</option>

@@ -6,10 +6,11 @@ const upload = require('../middlewares/usersMulterMiddleware');
 const validations = require('../middlewares/validationRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 router.get('/register', guestMiddleware, usersControllers.register); //RENDERIZADO DE LA PAGINA DE REGISTRACION
 router.post('/register',upload.single('imagen'), validations, usersControllers.store); //CREACION O GUARDADO DEL USUARIO
-router.get('/users', usersControllers.findAll); // TODOS LOS USUARIOS
+router.get('/users',adminMiddleware, usersControllers.findAll); // TODOS LOS USUARIOS
 router.get('/userDetail/:id',authMiddleware, usersControllers.findForId); //DETALLE DEL USUARIO
 router.delete('/delete/:id', usersControllers.delete); //ELIMINACION DEL USUARIO POR SU ID
 router.get('/userEdit/:id',authMiddleware, usersControllers.userEdit); //RENDERIZADO DE LA PAGINA DE EDICION DEL USUARIO
