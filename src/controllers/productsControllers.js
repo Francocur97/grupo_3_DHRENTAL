@@ -3,54 +3,52 @@ const fs = require('fs');
 
 const productsFilePath = path.join(__dirname + '../../database/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
 
 const controllers = {
 
   products: (req, res) => {
 
-    res.render('./products/products',{products}); // TODOS LOS PRODUCTOS
+    db.Products.findAll()
+    .then(function(products){
+      res.render('./products/products',{products:products})
+    }); // TODOS LOS PRODUCTOS
 
   },
 
   productCreate: (req, res) => {
-
     res.render('./products/productCreate'); // RENDERIZA LA PAGINA DE CREACION DEL PRODUCTO
-
   },
 
   store: (req, res) => {
 
-    let newProduct = {
-      "id": products[products.length -1]["id"]+1,
-      "imagen": req.file.filename,
-      "nombre": req.body.titulo,
-      "descripcion": req.body.descripcion,
-      "precio": req.body.precio,
-      "categoria": req.body.categoria,
-      "oferta": req.body.oferta
-    };
-
-    products.push(newProduct);
-
-		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,''));
-
-    res.redirect('/'); //CREA O GUARDA EL PRODUCTO
+    db.Products.create({
+      "image": req.file.filename,
+      "name": req.body.titulo,
+      "description": req.body.descripcion,
+      "price": req.body.precio,
+      "in_sale": req.body.oferta,
+      "category_id": req.body.categoria,
+  })
+ 
+  .then(() => {res.redirect('/')}); //CREA O GUARDA EL PRODUCTO
 
   },
 
  productEdit: (req, res) => {
  
-  let product = products.find(product => product.id == req.params.id);
-
-    res.render('./products/productEdit', {product}); // RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO
+  db.Products.findByPk(req.params.id)
+  .then(function(product){
+    res.render('./products/productEdit', {product:product}); // RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO
+  });
 
   },
-
   productDetail: (req, res) => {
     
-    let product = products.find(product => product.id == req.params.id);
-
-      res.render('./products/productDetail', {product}); // RENDERIZA LA PAGINA DETALLE DEL PRODUCTO
+    db.Products.findByPk(req.params.id)
+        .then(function(product){
+            res.render('./products/productDetail',{product:product})
+        });// RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO // RENDERIZA LA PAGINA DETALLE DEL PRODUCTO
 
   },
 
@@ -60,46 +58,29 @@ const controllers = {
 
   },
 
-  delete: (req, res) => {
-
-    let productDelete = req.params.id;
-
-    let product = products.filter(product => product.id != productDelete);
-
-    let productStore = JSON.stringify(product);
+  delete: function (req, res) {
     
-    //fs.unlinkSync(path.resolve('./public/images/products/' + product[0].imagen));
+        db.Products.destroy({where:{id:req.params.id}})
+        .then(res.redirect('/'))
 
-    fs.writeFileSync(__dirname + '../../database/products.json', productStore);
-
-    res.redirect('/'); // ELIMINA EL PRODUCTO
-
-  },
+    },
   
   update: (req,res) => {
 
-    let product = products.find(product => product.id == req.params.id);
-
-    let newProduct = {
-      "id": product.id,
-      "imagen": req.file.filename,
-      "nombre": req.body.titulo,
-      "descripcion": req.body.descripcion,
-      "precio": req.body.precio,
-      "categoria": req.body.categoria,
-      "oferta": req.body.oferta
-    };
-
-		let productToEdit = products.map(product => {
-			if(newProduct.id == product.id) {
-		return	product = newProduct;  
-	}
-		return product;
-	}); 
-
-  fs.writeFileSync(productsFilePath, JSON.stringify(productToEdit, null, ''))
-
-	res.redirect('/'); // EDITA EL PRODUCTO POR SU ID
+    db.Products.update(
+      {
+        "image": req.file.filename,
+        "name": req.body.titulo,
+        "description": req.body.descripcion,
+        "price": req.body.precio,
+        "in_sale": req.body.oferta,
+        "category_id": req.body.categoria,
+      },{
+          where:{
+              id:req.params.id
+          }
+      })
+      .then(res.redirect('/'))// EDITA EL PRODUCTO POR SU ID
   }
 
 };
