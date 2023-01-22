@@ -1,6 +1,6 @@
 Tematica del sitio y publico objetivo:
 
-En DHRENTAL nuestra misión es proporcionar,  a través de la venta y/ o alquiler,  el instrumento musical o equipo de sonido ideal que cualquier músico o sonidista necesite. 
+En DHRENTAL nuestra misión es proporcionar a través de la venta guitarras a cualquier persona o empresa. 
 
 Nuestro público objetivo son músicos y sonidistas. 
 

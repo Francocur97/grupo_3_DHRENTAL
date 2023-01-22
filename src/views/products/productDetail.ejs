@@ -24,7 +24,7 @@
                     
                 </div>
             </article> 
-            <% if (locals.isLogged && locals.admin) { %>
+            <% if (locals.isLogged && locals.userLogged.rol) { %>
             <section class="form-detalle">
                
                <a class="boton-detalle" href="/products/productEdit/<%= product.id %>">Editar</a>

@@ -48,7 +48,7 @@
                 <a href="/contact">
                     <li>Contacto</li>
                 </a>
-                <% if (locals.isLogged && locals.admin) { %>
+                <% if (locals.isLogged && locals.userLogged.rol) { %>
                 <a href="/products/productCreate">
                     <li>Agregar Producto</li>
                 </a>
@@ -72,7 +72,7 @@
             <li><a href="/products/products">Productos</a></li>
             <li><a href="/us">Nosotros</a></li>
             <li><a href="/contact">Contacto</a></li>
-            <% if (locals.isLogged && locals.admin) { %>
+            <% if (locals.isLogged && locals.userLogged.rol) { %>
             <li><a href="/products/productCreate">Agregar Producto</a></li>
             <li><a href="/users/users">Usuarios</a></li>
              <% } %>

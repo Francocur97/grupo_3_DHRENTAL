@@ -27,8 +27,8 @@ Conclusiones Sprint 4:
 5. Dejar de hacer: Escribir metodos de controladores , o variables con nombres descriptivos y faciles de saber para que se van a implementar.
 
 Conclusiones Sprint 5:
-1. Comenzar a hacer: 
-2. Hacer más: 
-3. Continuar haciendo: 
-4. Hacer menos: 
-5. Dejar de hacer: 
+1. Comenzar a hacer: Entender como aplicar los middlewares a las routes, y lo que va a ver cada usuario en las vistas(tanto admin,como usuario comun).
+2. Hacer más: Más comunicacion en el equipo.
+3. Continuar haciendo: Trabajar en el proyecto continuamente.
+4. Hacer menos: No escribir codigo sin saber la lógica a implementar primero.
+5. Dejar de hacer: No usar mas espanglish xD.

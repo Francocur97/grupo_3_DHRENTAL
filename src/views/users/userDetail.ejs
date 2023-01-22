@@ -31,7 +31,7 @@
             <section class="form-detalle">
 
                <a class="boton-detalle" href="/users/userEdit/<%= user.id %>">Editar</a>
-               <% if (locals.isLogged && locals.admin) { %>
+               <% if (locals.isLogged && locals.userLogged.rol) { %>
                 <form action="/users/delete/<%= user.id %>?_method=delete" method="post">
                     <button class="boton-detalle" type="submit"><a>Eliminar</a></button>
                 </form>
