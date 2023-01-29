@@ -18,12 +18,12 @@
         <% users.forEach(users => { %>
             <a class="tarjeta" href="/users/userDetail/<%= users.id %>">
                 <article class="articulo-destacado">
-                    <img class="imagen-home" src="/images/users/<%= users.imagen %> " alt="">
-                    <p class="descripcion">Nombre: <%= users.nombre %></p>
-                    <p class="descripcion">Apellido: <%= users.apellido %></p>
+                    <img class="imagen-home" src="/images/users/<%= users.image %> " alt="">
+                    <p class="descripcion">Nombre: <%= users.name %></p>
+                    <p class="descripcion">Apellido: <%= users.last_name %></p>
                     <p class="descripcion">Email: <%= users.email %></p>
-                    <p class="descripcion">Domicilio: <%= users.domicilio %></p>
-                    <p class="descripcion">Celular: <%= users.celular %></p>     
+                    <p class="descripcion">Domicilio: <%= users.adress %></p>
+                    <p class="descripcion">Celular: <%= users.cell_phone %></p>     
                 
                 </article>
             </a>

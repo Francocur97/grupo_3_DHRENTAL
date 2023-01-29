@@ -26,12 +26,12 @@
                     <p class="mensaje-error"><%= errors.apellido.msg %> </p>
                    <% } %>
                 <label for="email">Email:</label>
-                <input class="input-form <%= locals.errors && errors.email ? 'is-invalid' : null %> " type="email" name="email" placeholder="usuario@gmail.com" id="email" value="<%= locals.oldData ? oldData.email : null %>" required>
+                <input class="input-form <%= locals.errors && errors.email ? 'is-invalid' : null %> " type="email" name="email" placeholder="usuario@gmail.com" id="mail" value="<%= locals.oldData ? oldData.email : null %>" required>
                 <% if (locals.errors && errors.email) { %>
                     <p class="mensaje-error"><%= errors.email.msg %> </p>
                    <% } %>
                 <label for="contraseña">Contraseña:</label>
-                <input class="input-form <%= locals.errors && errors.contraseña ? 'is-invalid' : null %>" type="password" name="password" id="contraseña" required>
+                <input class="input-form <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password" name="password" id="contraseña" required>
                 <% if (locals.errors && errors.password) { %>
                     <p class="mensaje-error"><%= errors.password.msg %></p>
                    <% } %>

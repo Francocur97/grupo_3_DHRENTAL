@@ -32,3 +32,24 @@ Conclusiones Sprint 5:
 3. Continuar haciendo: Trabajar en el proyecto continuamente.
 4. Hacer menos: No escribir codigo sin saber la lógica a implementar primero.
 5. Dejar de hacer: No usar mas espanglish xD.
+
+Conclusiones Sprint 6:
+1. Comenzar a hacer: 
+2. Hacer más: 
+3. Continuar haciendo: 
+4. Hacer menos: No escribir 
+5. Dejar de hacer: 
+
+Conclusiones Sprint 7:
+1. Comenzar a hacer: 
+2. Hacer más: 
+3. Continuar haciendo: 
+4. Hacer menos: No escribir 
+5. Dejar de hacer: 
+
+Conclusiones Sprint 8:
+1. Comenzar a hacer: 
+2. Hacer más: 
+3. Continuar haciendo: 
+4. Hacer menos: No escribir 
+5. Dejar de hacer: 

@@ -2,8 +2,6 @@
 
 const controllers = require("../controllers/usersControllers");
 
-
-
 function userLoggedMiddleware(req,res,next){
 
     res.locals.isLogged = false;
