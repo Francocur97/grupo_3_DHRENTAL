@@ -3,7 +3,6 @@ const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-
 const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const db = require('../database/models');
@@ -13,21 +12,16 @@ const controllers = {
 
     findByField: (field, text) => {
 
-        let userFound = users.find( user => user[field] === text); // BUSCAR EL USUARIO POR MAIL
+        let userFound = users.find(user => user[field] === text); // BUSCAR EL USUARIO POR MAIL
         return userFound;
 
         },
-    // findOne:(req,res)=>{
-    //     db.User.findOne({ where: { email: 'email' } })
-    // },
 
     register: (req, res) => {
 
         res.render('./users/register'); // RENDERIZA LA PAGINA DE REGISTRACION
 
     },
-
-    
 
     store: (req, res) => {
 
@@ -41,32 +35,33 @@ const controllers = {
             });
         };
 
-    let userEmailUsed = controllers.findByField('email',req.body.email);
+    db.User.findOne({where:{email:req.body.email}})
+    .then(function(user){
+        if(user){
 
-      if(userEmailUsed){
+            return res.render('./users/register', {
+                   errors: {email:{
+                    msg:'Este Email ya esta registrado'}
+                },
+                    oldData: req.body});
+    
+            }else{
+    
+            db.User.create({   
+                "image": req.file.filename,
+                "name": req.body.nombre,
+                "last_name": req.body.apellido,
+                "email": req.body.email,
+                "password":bcryptjs.hashSync(req.body.password,10), 
+                "adress": req.body.domicilio,
+                "cell_phone": req.body.celular,
+                "rol":'null'
+                })
+    
+                .then(() => {
+                    return res.redirect('/')});}
 
-        return res.render('./users/register', {
-               errors: {email:{
-                msg:'Este Email ya esta registrado'}
-            },
-                oldData: req.body});
-
-        }else{
-
-
-        db.User.create({   
-            "image": req.file.filename,
-            "name": req.body.nombre,
-            "last_name": req.body.apellido,
-            "email": req.body.email,
-            "password":bcryptjs.hashSync(req.body.password,10), 
-            "adress": req.body.domicilio,
-            "cell_phone": req.body.celular,
-            "rol":'null'
-            })
-
-            .then(() => {
-                return res.redirect('/')});}
+    });
 
     },
 
@@ -75,6 +70,7 @@ const controllers = {
         .then((users)=>{
             res.render('./users/users', {users:users})
         }); //PAGINA QUE MUESTRA A TODOS LOS USUARIOS
+
     },
 
     findForId: (req, res) => {
@@ -102,6 +98,7 @@ const controllers = {
        
          
     },
+    
     update: (req, res) => {
 
         db.User.update(
@@ -130,19 +127,20 @@ const controllers = {
 
     loginProcess: (req,res) => {
 
-        let userToLogin = controllers.findByField("email",req.body.email);
-
-        if(userToLogin){
-            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-          if(passwordOk){
-            req.session.userLogged = userToLogin;
-
-            if(req.body.remember){
+      db.User.findOne({where:{email:req.body.email}})
+      .then(function(user){
+        
+        if(user){
+            let passwordOk = bcryptjs.compareSync(req.body.password, user.password)
+        if(passwordOk){
+            req.session.userLogged = user
+            
+        if(req.body.remember && req.session.userLogged == user){
                 res.cookie('email', req.body.email, { maxAge: 10000 * 30 });
             }
-            return res.redirect('./profile');
+        return res.redirect('/')
           }
-          return res.render('./users/login', {
+        return res.render('./users/login', {
             errors:{
                 password:{
                     msg: 'Contraseña incorrecta'
@@ -157,8 +155,9 @@ const controllers = {
                     msg: 'No se encuentra registrado este email'
                 }
             }
-        });
-        
+        })
+    })
+         
     },
 
     profile:(req, res) => {

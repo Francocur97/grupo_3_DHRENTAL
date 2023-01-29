@@ -1,8 +1,8 @@
-const path = require('path');
-const fs = require('fs');
+//const path = require('path');
+//const fs = require('fs');
 
-const productsFilePath = path.join(__dirname,'../database/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname,'../database/products.json');
+//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require('../database/models');
 
 const controllers = {
@@ -18,6 +18,7 @@ const controllers = {
 
   productCreate: (req, res) => {
     res.render('./products/productCreate'); // RENDERIZA LA PAGINA DE CREACION DEL PRODUCTO
+
   },
 
   store: (req, res) => {
@@ -43,6 +44,7 @@ const controllers = {
   });
 
   },
+
   productDetail: (req, res) => {
     
     db.Products.findByPk(req.params.id)
@@ -53,7 +55,6 @@ const controllers = {
   },
 
   productCart: (req, res) => {
-
     res.render('./products/productCart'); // CONTROLADOR CARRITO DE COMPRAS
 
   },
@@ -67,8 +68,7 @@ const controllers = {
   
   update: (req,res) => {
 
-    db.Products.update(
-      {
+    db.Products.update({
         "image": req.file.filename,
         "name": req.body.titulo,
         "description": req.body.descripcion,
