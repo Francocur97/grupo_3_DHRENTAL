@@ -15,12 +15,12 @@
             
 <% products.forEach(product => { %>
  
-
             <a class="tarjeta" href="/products/productDetail/<%= product.id %> ">
                 <article class="articulo-destacado">
                     <img class="imagen-home" src="/images/products/<%= product.image %>" alt="">
                     <p class="descripcion"><%= product.name %></p>
                     <p class="descripcion">$<%= product.price %></p>
+                    <p class="descripcion"><%= product.category.name %></p>
                 </article>
             </a>
             

@@ -16,26 +16,26 @@
             <form class="formlogin" action="/products/create" method="POST" enctype="multipart/form-data">
 
                 <label for="imagen">Imagen</label>
-                <input class="input-producto" type="file" name="imagen" id="imagen" accept=".png, .jpg" required>
+                <input class="input-producto" type="file" name="imagen" id="imagen" accept=".png, .jpg">
 
                 <label for="titulo">Titulo:</label>
-                <input class="input-producto" type="text" name="titulo" id="titulo" required>
+                <input class="input-producto" type="text" name="titulo" id="titulo">
 
                 <label for="descripcion">Descripcion:</label>
                 <textarea class="input-producto" name="descripcion" id="descripcion" cols="30" rows="5"
-                    placeholder="Agregar descripcion del producto..." required></textarea>
+                    placeholder="Agregar descripcion del producto..."></textarea>
 
                 <label for="precio">Precio:</label>
-                <input class="input-producto" type="number" name="precio" id="precio" required>
+                <input class="input-producto" type="number" name="precio" id="precio">
 
                 <label for="oferta" class="form-label">Producto en oferta:</label>
-                <select name="oferta" id="oferta" class="form-input" required>
+                <select name="oferta" id="oferta" class="form-input">
                     <option value="not">No</option>
                     <option value="yes">En oferta</option>
                 </select>
 
                 <label for="categoria" class="form-label">Categoría:</label>
-                <select name="categoria" id="categoria" class="form-input" required>
+                <select name="categoria" id="categoria" class="form-input">
                     <option value="1">Criolla</option>
                     <option value="2">Acustica</option>
                     <option value="3">Electrica</option>

@@ -40,10 +40,36 @@ alias="Products"
 let config = {
     tableName:"products",
     timestamps:false,
-    underscore : true,
 }
+
     const Product = sequelize.define(alias,cols,config);
 
+
+        Product.associate = function(models){
+
+            Product.belongsTo(models.Category,{
+                as:"category",
+                foreignKey:"category_id"
+            })
+
+            Product.belongsToMany(models.User,{
+                as:"productShop",
+                through:'shop',
+                foreignKey:'products_id',
+                otherKey: 'users_id',
+                timestamps:false,
+            })
+            Product.belongsToMany(models.User,{
+                as:"productCart",
+                through:'cart',
+                foreignKey:'products_id',
+                otherKey: 'users_id',
+                timestamps:false,
+            })
+
+        }
+    
+         
     return Product;
 
 }

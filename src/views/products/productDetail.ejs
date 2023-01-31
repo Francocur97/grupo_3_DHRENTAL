@@ -24,7 +24,7 @@
                     
                 </div>
             </article> 
-            <% if (locals.isLogged && locals.userLogged.rol) { %>
+            <% if (locals.isLogged && locals.userLogged.rol == "admin") { %>
             <section class="form-detalle">
                
             <form action="/products/productEdit/<%= product.id %>" method="get">

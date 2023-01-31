@@ -1,6 +1,6 @@
 // VALIDACIONES DEL PROCESO DE REGISTRACION DEL USUARIO
 
-const { body } = require('express-validator');
+const { body, check } = require('express-validator');
 
 const validations = [
 
@@ -23,3 +23,5 @@ const validations = [
 ]
 
 module.exports = validations;
+
+ 

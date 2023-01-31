@@ -16,25 +16,25 @@
             <form class="formlogin" action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                 <label for="imagen">Imagen</label>
-                <input class="input-producto" type="file" name="imagen" id="imagen" placeholder="<%= product.image %>" value="<%= product.image %>" required>
+                <input class="input-producto" type="file" name="imagen" id="imagen" placeholder="<%= product.image %>" value="<%= product.image %>">
 
                 <label for="titulo">Titulo:</label>
-                <input class="input-producto" type="text" name="titulo" id="titulo" placeholder="<%= product.name %>" value="<%= product.name %>" required>
+                <input class="input-producto" type="text" name="titulo" id="titulo" placeholder="<%= product.name %>" value="<%= product.name %>">
 
                 <label for="descripcion">Descripcion:</label> 
-                <textarea class="input-producto"  name="descripcion" id="descripcion" cols="30" rows="5" placeholder="<%= product.description %>" value="<%= product.description %>" required ><%= product.description %></textarea>
+                <textarea class="input-producto"  name="descripcion" id="descripcion" cols="30" rows="5" placeholder="<%= product.description %>" value="<%= product.description %>" ><%= product.description %></textarea>
 
                 <label for="precio">Precio:</label>
-                <input class="input-producto" type="number" name="precio" id="precio" placeholder="<%= product.price %>" value="<%= product.price %>" required>
+                <input class="input-producto" type="number" name="precio" id="precio" placeholder="<%= product.price %>" value="<%= product.price %>">
 
                 <label for="oferta" class="form-label">Producto en oferta:</label>
-                <select name="oferta" id="oferta" class="form-input" required>
+                <select name="oferta" id="oferta" class="form-input">
                     <option value="not">No</option>
                     <option value="yes">En oferta</option>
                 </select>
 
                 <label for="categoria" class="form-label">Categoría:</label>
-                <select name="categoria" id="categoria" class="form-input" required>
+                <select name="categoria" id="categoria" class="form-input">
                     <option value="1">Criolla</option>
                     <option value="2">Electroacustica</option>
                     <option value="3">Electrica</option>

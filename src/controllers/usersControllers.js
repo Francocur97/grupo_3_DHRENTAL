@@ -55,7 +55,7 @@ const controllers = {
                 "password":bcryptjs.hashSync(req.body.password,10), 
                 "adress": req.body.domicilio,
                 "cell_phone": req.body.celular,
-                "rol":'null'
+                "rol":'user'
                 })
     
                 .then(() => {
@@ -109,7 +109,7 @@ const controllers = {
                 "password":bcryptjs.hashSync(req.body.password,10), 
                 "adress": req.body.domicilio,
                 "cell_phone": req.body.celular,
-                "rol":'null'
+                "rol":req.body.rol
             },{
                 where:{
                     id:req.params.id
@@ -134,7 +134,7 @@ const controllers = {
             let passwordOk = bcryptjs.compareSync(req.body.password, user.password)
         if(passwordOk){
             req.session.userLogged = user
-            
+
         if(req.body.remember && req.session.userLogged == user){
                 res.cookie('email', req.body.email, { maxAge: 10000 * 30 });
             }
