@@ -23,8 +23,15 @@ const controllers = {
 
   store: (req, res) => {
 
+    // let img 
+    // if(req.file == null){
+    //   "default.jpg"
+    // }else{
+    //   req.body.filename
+    // }
+
     db.Products.create({
-      "image": req.file.filename,
+      "image": img,
       "name": req.body.titulo,
       "description": req.body.descripcion,
       "price": req.body.precio,
@@ -68,8 +75,15 @@ const controllers = {
   
   update: (req,res) => {
 
+    let img 
+    if(req.file > 0){
+      req.file.filename
+    }else{
+      req.body.imagen
+    }
+
     db.Products.update({
-        "image": req.file.filename,
+        "image": img,
         "name": req.body.titulo,
         "description": req.body.descripcion,
         "price": req.body.precio,

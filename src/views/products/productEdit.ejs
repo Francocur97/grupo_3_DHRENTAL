@@ -14,9 +14,10 @@
             <h1 class="titular-login">Editar</h1>
 
             <form class="formlogin" action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-
+                <img src="/images/products/<%= product.image %>" alt="">
                 <label for="imagen">Imagen</label>
-                <input class="input-producto" type="file" name="imagen" id="imagen" placeholder="<%= product.image %>" value="<%= product.image %>">
+
+                <input class="input-producto" type="file" name="imagen" id="imagen" value="<%= product.image %>">
 
                 <label for="titulo">Titulo:</label>
                 <input class="input-producto" type="text" name="titulo" id="titulo" placeholder="<%= product.name %>" value="<%= product.name %>">
