@@ -66,6 +66,10 @@ let config = {
                 otherKey: 'users_id',
                 timestamps:false,
             })
+            Product.hasMany(models.Stock,{
+                as: "products",
+                foreignKey: "products_id"
+            })
 
         }
     
@@ -73,4 +77,3 @@ let config = {
     return Product;
 
 }
-
