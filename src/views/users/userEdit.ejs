@@ -38,6 +38,7 @@
                 <input class="input-form" type="tel" name="celular" placeholder="1130254059" id="celular" value="<%= user.cell_phone %>">
             
                 <label for="imagen">Avatar:</label>
+                <img src="/images/users/<%= user.image %>" alt="" class="avatar-edit">
                 <input class="input-producto" type="file" name="imagen" id="imagen" accept=".jpg, .png" value="<%= user.image %>">
 
                 <select name="rol" id="rol" class="input-form2">

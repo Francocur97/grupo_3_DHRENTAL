@@ -34,11 +34,11 @@ Conclusiones Sprint 5:
 5. Dejar de hacer: No usar mas espanglish xD.
 
 Conclusiones Sprint 6:
-1. Comenzar a hacer: 
-2. Hacer más: 
-3. Continuar haciendo: 
-4. Hacer menos: No escribir 
-5. Dejar de hacer: 
+1. Comenzar a hacer: Empezar a implementar las daily o weekly.
+2. Hacer más: Poder haber implementado el carrito y mas relaciones.
+3. Continuar haciendo: Constatemente trabajar en el proyecto y encontrar cada dia mas aspectos que mejorar.
+4. Hacer menos: Probar que la base de datos funcione perfectamente y despues unirla al proyecto. 
+5. Dejar de hacer: Haber echo la base de datos sin diagrama primero.
 
 Conclusiones Sprint 7:
 1. Comenzar a hacer: 

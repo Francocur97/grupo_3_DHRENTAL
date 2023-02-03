@@ -46,7 +46,7 @@
                     <p class="mensaje-error"><%= errors.celular.msg %> </p>
                    <% } %>
                 <label for="imagen">Avatar:</label>
-                <input class="input-producto" type="file" name="imagen" id="imagen" accept=".jpg, .png" value="<%= locals.oldData ? oldData.imagen : null %>">
+                <input class="input-producto" type="file" name="imagen" id="imagen" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.oldData ? oldData.imagen : null %>">
                 <% if (locals.errors && errors.imagen) { %>
                     <p class="mensaje-error"><%= errors.imagen.msg %> </p>
                    <% } %>

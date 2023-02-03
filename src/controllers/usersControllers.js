@@ -46,9 +46,17 @@ const controllers = {
                     oldData: req.body});
     
             }else{
+                
+                let img 
+  
+                if(!req.file){
+                  img = 'default.jpg'
+                }else{
+                  img = req.file.filename
+                }
     
             db.User.create({   
-                "image": req.file.filename,
+                "image": img,
                 "name": req.body.nombre,
                 "last_name": req.body.apellido,
                 "email": req.body.email,
@@ -101,8 +109,16 @@ const controllers = {
     
     update: (req, res) => {
 
+       
+    let img 
+    if(!req.file){
+      img = req.body.imagen
+    }else{
+      img = req.file.filename
+    }
+
         db.User.update(
-            {   "image": req.file.filename,
+            {   "image": img,
                 "name": req.body.nombre,
                 "last_name": req.body.apellido,
                 "email": req.body.email,
@@ -127,19 +143,35 @@ const controllers = {
 
     loginProcess: (req,res) => {
 
+        let validacion = validationResult(req);
+
+        if (validacion.errors.length > 0) {
+
+             return res.render('./users/login', {
+                errors: validacion.mapped(),
+                oldData: req.body
+            });
+        };
+
       db.User.findOne({where:{email:req.body.email}})
       .then(function(user){
         
         if(user){
+
             let passwordOk = bcryptjs.compareSync(req.body.password, user.password)
+
         if(passwordOk){
+
             req.session.userLogged = user
 
         if(req.body.remember && req.session.userLogged == user){
+
                 res.cookie('email', req.body.email, { maxAge: 10000 * 30 });
+
             }
         return res.redirect('/')
           }
+          
         return res.render('./users/login', {
             errors:{
                 password:{

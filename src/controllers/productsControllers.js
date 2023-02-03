@@ -9,7 +9,7 @@ const controllers = {
 
   products: (req, res) => {
 
-    db.Products.findAll()
+    db.Products.findAll({include:[{association:"category"}]})
     .then(function(products){
       res.render('./products/products',{products:products})
     }); // TODOS LOS PRODUCTOS
@@ -23,12 +23,13 @@ const controllers = {
 
   store: (req, res) => {
 
-    // let img 
-    // if(req.file == null){
-    //   "default.jpg"
-    // }else{
-    //   req.body.filename
-    // }
+    let img 
+  
+    if(!req.file){
+      img = 'default.jpg'
+    }else{
+      img = req.file.filename
+    }
 
     db.Products.create({
       "image": img,
@@ -76,11 +77,12 @@ const controllers = {
   update: (req,res) => {
 
     let img 
-    if(req.file > 0){
-      req.file.filename
+    if(!req.file){
+      img = req.body.imagen
     }else{
-      req.body.imagen
+      img = req.file.filename
     }
+    
 
     db.Products.update({
         "image": img,

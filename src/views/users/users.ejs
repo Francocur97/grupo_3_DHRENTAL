@@ -23,8 +23,18 @@
                     <p class="descripcion">Apellido: <%= users.last_name %></p>
                     <p class="descripcion">Email: <%= users.email %></p>
                     <p class="descripcion">Domicilio: <%= users.adress %></p>
-                    <p class="descripcion">Celular: <%= users.cell_phone %></p>     
-                
+                    <p class="descripcion">Celular: <%= users.cell_phone %></p>    
+                     
+                    <% if (locals.isLogged && locals.userLogged.rol) { %>
+                     <section class="form-products">
+                        <form action="/users/userEdit/<%= users.id %>" method="get">
+                            <button class="boton-detalle" type="submit">Editar</button>
+                        </form>
+                         <form action="/users/delete/<%= users.id %>?_method=delete" method="post">
+                            <button class="boton-detalle" type="submit">Eliminar</button>
+                        </form>
+                    </section>
+                    <% } %> 
                 </article>
             </a>
             <% }) %>

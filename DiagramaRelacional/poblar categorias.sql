@@ -3,7 +3,8 @@ default,
 "Criolla"
 ),(
 default,
-"Electroacustica"),(
+"Electroacustica"
+),(
 default,
 "Electrica"
 )

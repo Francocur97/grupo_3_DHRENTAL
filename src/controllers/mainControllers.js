@@ -5,12 +5,13 @@
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); // CONVIERTE LOS PRODUCTOS DE UN JSON EN UN ARRAY
 
 //const inSale = products.filter(function(product){return product.oferta == "En-oferta";});
+
 const db = require('../database/models');
 const Category = require('../database/models');
 
 const controllers = {
     index: (req,res) => {
-        db.Products.findAll({include:[{association:"category"}]})
+        db.Products.findAll({where:{in_sale:'yes'}})
         .then(function(products){ 
             res.render('index',{products})
         });   
