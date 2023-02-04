@@ -21,12 +21,12 @@
                  <p class="mensaje-error"><%= errors.nombre.msg %> </p>
                 <% } %>
                 <label for="apellido">Apellido:</label>
-                <input class="input-form <%= locals.errors && errors.apellido ? 'is-invalid' : null %> " type="text" name="apellido" placeholder="Cosme" id="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <input class="input-form <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" type="text" name="apellido" placeholder="Cosme" id="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
                 <% if (locals.errors && errors.apellido) { %>
                     <p class="mensaje-error"><%= errors.apellido.msg %> </p>
                    <% } %>
                 <label for="email">Email:</label>
-                <input class="input-form <%= locals.errors && errors.email ? 'is-invalid' : null %> " type="email" name="email" placeholder="usuario@gmail.com" id="mail" value="<%= locals.oldData ? oldData.email : null %>">
+                <input class="input-form <%= locals.errors && errors.email ? 'is-invalid' : null %>" type="email" name="email" placeholder="usuario@gmail.com" id="mail" value="<%= locals.oldData ? oldData.email : null %>">
                 <% if (locals.errors && errors.email) { %>
                     <p class="mensaje-error"><%= errors.email.msg %> </p>
                    <% } %>
@@ -36,17 +36,17 @@
                     <p class="mensaje-error"><%= errors.password.msg %></p>
                    <% } %>
                 <label for="domicilio">Domicilio:</label>
-                <input class="input-form <%= locals.errors && errors.domicilio ? 'is-invalid' : null %> " type="text" name="domicilio" placeholder="Avenida siempre viva 123" id="domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>">
+                <input class="input-form <%= locals.errors && errors.domicilio ? 'is-invalid' : null %>" type="text" name="domicilio" placeholder="Avenida siempre viva 123" id="domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>">
                 <% if (locals.errors && errors.domicilio) { %>
-                    <p class="mensaje-error"><%= errors.domicilio.msg %> </p>
+                    <p class="mensaje-error"><%= errors.domicilio.msg %></p>
                    <% } %>
                 <label for="celular">Celular:</label>
-                <input class="input-form <%= locals.errors && errors.celular ? 'is-invalid' : null %> " type="tel" name="celular" placeholder="1130254059" id="celular" value="<%= locals.oldData ? oldData.celular : null %>">
+                <input class="input-form <%= locals.errors && errors.celular ? 'is-invalid' : null %>" type="tel" name="celular" placeholder="1130254059" id="celular" value="<%= locals.oldData ? oldData.celular : null %>">
                 <% if (locals.errors && errors.celular) { %>
                     <p class="mensaje-error"><%= errors.celular.msg %> </p>
                    <% } %>
                 <label for="imagen">Avatar:</label>
-                <input class="input-producto" type="file" name="imagen" id="imagen" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.oldData ? oldData.imagen : null %>">
+                <input class="input-producto <%= locals.errors && errors.imagen ? 'is-invalid' : null %>" type="file" name="imagen" id="imagen" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.oldData ? oldData.imagen : null %>">
                 <% if (locals.errors && errors.imagen) { %>
                     <p class="mensaje-error"><%= errors.imagen.msg %> </p>
                    <% } %>

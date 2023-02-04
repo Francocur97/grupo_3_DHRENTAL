@@ -3,6 +3,7 @@
 
 //const productsFilePath = path.join(__dirname,'../database/products.json');
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
 const controllers = {
@@ -22,6 +23,16 @@ const controllers = {
   },
 
   store: (req, res) => {
+
+    let validacion = validationResult(req);
+
+        if (validacion.errors.length > 0) {
+
+             return res.render('./products/productCreate', {
+                errors: validacion.mapped(),
+                oldData: req.body
+            })
+        }
 
     let img 
   
@@ -73,8 +84,20 @@ const controllers = {
         .then(res.redirect('/'))
 
     },
+
+
   
   update: (req,res) => {
+    
+    let validacion = validationResult(req);
+
+    if (validacion.errors.length > 0) {
+
+         return res.render('./products/productEdit', {
+            errors: validacion.mapped(),
+            oldData: req.body
+        })
+    }
 
     let img 
     if(!req.file){
@@ -82,7 +105,6 @@ const controllers = {
     }else{
       img = req.file.filename
     }
-    
 
     db.Products.update({
         "image": img,

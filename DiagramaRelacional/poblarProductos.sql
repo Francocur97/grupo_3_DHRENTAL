@@ -8,7 +8,7 @@ default,
 3
 ),(
 default,
-"product-1673804941543.jpg",
+"product-1674997462037.jpg",
 "Guitarra Cort",
 "Guitarra Electroacústica Cort, no tiene palanca, 6 cuerdas, 20 trastes, tipo de puente fijo. No incluye funda ni cables.",
 130000,
@@ -30,5 +30,19 @@ default,
 70000,
 "not",
 2
-)
+),(
+default,
+"product-1674995857016.jpg",
+"Guitarra Flying V",
+"Guitarra electrica flying V, con puente fijo,3 microfonos y 22 trastes.",
+200000,
+"yes",
+2),(
+default,
+"product-1674995960558.jpg",
+"Guitarra Gibson",
+"Guitarra Gibson Eléctrica tipo lex-paul, tiene 2 micrófonos, puente fijo y 22 trastes.",
+250000,
+"not",
+2)
 

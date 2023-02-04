@@ -20,26 +20,47 @@
             <form class="formlogin" action="/users/userEdit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                 <label for="nombre">Nombre:</label>
-                <input class="input-form" type="text" name="nombre" placeholder="Fulanito" id="nombre" value="<%= user.name %>">
+                <input class="input-form <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" type="text" name="nombre" placeholder="Fulanito" id="nombre" value="<%= user.name %>">
+                <% if (locals.errors && errors.nombre) { %>
+                    <p class="mensaje-error"><%= errors.nombre.msg %> </p>
+                   <% } %>
                
                 <label for="apellido">Apellido:</label>
-                <input class="input-form" type="text" name="apellido" placeholder="Cosme" id="apellido" value="<%= user.last_name %>">
+                <input class="input-form <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" type="text" name="apellido" placeholder="Cosme" id="apellido" value="<%= user.last_name %>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <p class="mensaje-error"><%= errors.apellido.msg %> </p>
+                   <% } %>
              
                 <label for="email">Email:</label>
-                <input class="input-form" type="email" name="email" placeholder="usuario@gmail.com" id="email" value="<%= user.email %>">
+                <input class="input-form <%= locals.errors && errors.email ? 'is-invalid' : null %>" type="email" name="email" placeholder="usuario@gmail.com" id="email" value="<%= user.email %>">
+                <% if (locals.errors && errors.email) { %>
+                    <p class="mensaje-error"><%= errors.email.msg %> </p>
+                   <% } %>
              
                 <label for="contraseña">Contraseña:</label>
-                <input class="input-form" type="password" name="password" id="contraseña" value="<%= user.password %>">
+                <input class="input-form <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password" name="password" id="contraseña" value="<%= user.password %>">
+                <% if (locals.errors && errors.password) { %>
+                    <p class="mensaje-error"><%= errors.password.msg %> </p>
+                   <% } %>
              
                 <label for="domicilio">Domicilio:</label>
-                <input class="input-form" type="text" name="domicilio" placeholder="Avenida siempre viva 123" id="domicilio" value="<%= user.adress %>">
+                <input class="input-form <%= locals.errors && errors.domicilio ? 'is-invalid' : null %>" type="text" name="domicilio" placeholder="Avenida siempre viva 123" id="domicilio" value="<%= user.adress %>">
+                <% if (locals.errors && errors.domicilio) { %>
+                    <p class="mensaje-error"><%= errors.domicilio.msg %> </p>
+                   <% } %>
 
                 <label for="celular">Celular:</label>
-                <input class="input-form" type="tel" name="celular" placeholder="1130254059" id="celular" value="<%= user.cell_phone %>">
+                <input class="input-form <%= locals.errors && errors.celular ? 'is-invalid' : null %>" type="tel" name="celular" placeholder="1130254059" id="celular" value="<%= user.cell_phone %>">
+                <% if (locals.errors && errors.celular) { %>
+                    <p class="mensaje-error"><%= errors.celular.msg %> </p>
+                   <% } %>
             
                 <label for="imagen">Avatar:</label>
                 <img src="/images/users/<%= user.image %>" alt="" class="avatar-edit">
-                <input class="input-producto" type="file" name="imagen" id="imagen" accept=".jpg, .png" value="<%= user.image %>">
+                <input class="input-producto <%= locals.errors && errors.imagen ? 'is-invalid' : null %>" type="file" name="imagen" id="imagen" value="<%= user.image %>">
+                <% if (locals.errors && errors.imagen) { %>
+                    <p class="mensaje-error"><%= errors.imagen.msg %> </p>
+                   <% } %>
 
                 <select name="rol" id="rol" class="input-form2">
                     <option value="admin">Administrador</option>

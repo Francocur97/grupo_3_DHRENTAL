@@ -1,6 +1,6 @@
 // VALIDACIONES DEL PROCESO DE REGISTRACION DEL USUARIO
 
-const { body, check } = require('express-validator');
+const { body } = require('express-validator');
 
 const validations = [
 
@@ -10,14 +10,33 @@ const validations = [
     body('password').notEmpty().withMessage('Debes completar este campo').bail().isLength({min:8}).withMessage('La contraseña debe tener un minimo de 8 caracteres'),
     body('domicilio').notEmpty().withMessage('Debes completar este campo').isLength({min:2}).withMessage('El nombre debe tener minimo 2 caracteres'),
     body('celular').notEmpty().withMessage('Debes completar este campo').bail().isLength({min:10}).withMessage('El telefono debe tener un minimo de 10 numeros'),
-    // body('imagen').custom((value,{ req })=>{
-
+    body('imagen').custom((value,{ req })=>{
+ 
+        let img = req.file;
+  
+        if(!req.file){
+            return  img = 'default.jpg'
+        }
+        if(req.file.mimetype.startsWith('image/')){
+            return img = req.file.filename
+        }else{
+            img = req.file = undefined
+            throw new Error('La imagen debe ser .jpg, .png, .jpeg, .gif');
+             
+        }
+      
+    })
     
-        // let almacenarUltimoString = req.file.originalname
+]
+
+module.exports = validations;
+
+ 
+// let almacenarUltimoString = req.file.originalname
         // almacenarUltimoString = almacenarUltimoString.split('.')[1]
         // console.log(req.file)let img 
-        
-        // if(!file){
+
+          // if(!file){
         //     throw new Error('Tienes que subir una imagen');
         // }else{
         //     return true
@@ -30,10 +49,3 @@ const validations = [
         //         return true
         //     }
     
-    // })
-    
-]
-
-module.exports = validations;
-
- 

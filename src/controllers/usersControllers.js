@@ -27,13 +27,13 @@ const controllers = {
 
         let validacion = validationResult(req);
 
-        if (validacion.errors.length > 0) {
+         if (validacion.errors.length > 0) {
 
              return res.render('./users/register', {
                 errors: validacion.mapped(),
                 oldData: req.body
-            });
-        };
+            })
+        }
 
     db.User.findOne({where:{email:req.body.email}})
     .then(function(user){
@@ -51,8 +51,6 @@ const controllers = {
   
                 if(!req.file){
                   img = 'default.jpg'
-                }else{
-                  img = req.file.filename
                 }
     
             db.User.create({   
@@ -109,6 +107,15 @@ const controllers = {
     
     update: (req, res) => {
 
+        let validacion = validationResult(req)
+
+        if (validacion.errors.length > 0) {
+
+             return res.render('./users/userEdit', {
+                errors: validacion.mapped(),
+                oldData: req.body
+            })
+        }
        
     let img 
     if(!req.file){

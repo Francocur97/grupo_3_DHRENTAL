@@ -1,6 +1,5 @@
 // MULTER DE USUARIOS
-
-const path = require ('path');
+const path = require('path');
 const multer = require('multer');
 
 const storage = multer.diskStorage({

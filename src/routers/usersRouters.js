@@ -10,12 +10,12 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 const userLoginMidleware = require('../middlewares/userLoginValidation')
 
 router.get('/register', guestMiddleware, usersControllers.register); //RENDERIZADO DE LA PAGINA DE REGISTRACION
-router.post('/register',upload.single('imagen'),validations, usersControllers.store); //CREACION O GUARDADO DEL USUARIO
-router.get('/users',adminMiddleware,authMiddleware, usersControllers.findAll); // TODOS LOS USUARIOS
-router.get('/userDetail/:id',authMiddleware, usersControllers.findForId); //DETALLE DEL USUARIO
-router.delete('/delete/:id',authMiddleware, usersControllers.delete); //ELIMINACION DEL USUARIO POR SU ID
-router.get('/userEdit/:id',authMiddleware, usersControllers.userEdit); //RENDERIZADO DE LA PAGINA DE EDICION DEL USUARIO
-router.put('/userEdit/:id',authMiddleware,upload.single('imagen'),validations, usersControllers.update); //ACTUALIZACION DE DATOS DEL USUARIO
+router.post('/register', upload.single('imagen'), validations, usersControllers.store); //CREACION O GUARDADO DEL USUARIO
+router.get('/users', adminMiddleware, authMiddleware, usersControllers.findAll); // TODOS LOS USUARIOS
+router.get('/userDetail/:id', authMiddleware, usersControllers.findForId); //DETALLE DEL USUARIO
+router.delete('/delete/:id', authMiddleware, usersControllers.delete); //ELIMINACION DEL USUARIO POR SU ID
+router.get('/userEdit/:id', authMiddleware, usersControllers.userEdit); //RENDERIZADO DE LA PAGINA DE EDICION DEL USUARIO
+router.put('/userEdit/:id', upload.single('imagen'), validations, usersControllers.update); //ACTUALIZACION DE DATOS DEL USUARIO
 
 router.get('/login', guestMiddleware, usersControllers.login); //RENDERIZADO DE LA PAGINA DEL LOGIN
 router.post('/login',userLoginMidleware, usersControllers.loginProcess); //PROCESO DE LOGUEO
