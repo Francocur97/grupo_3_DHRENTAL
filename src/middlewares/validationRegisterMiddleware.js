@@ -20,7 +20,6 @@ const validations = [
         if(req.file.mimetype.startsWith('image/')){
             return img = req.file.filename
         }else{
-            img = req.file = undefined
             throw new Error('La imagen debe ser .jpg, .png, .jpeg, .gif');
              
         }

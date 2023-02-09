@@ -1,8 +1,3 @@
-//const path = require('path');
-//const fs = require('fs');
-
-//const productsFilePath = path.join(__dirname,'../database/products.json');
-//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
@@ -12,55 +7,52 @@ const controllers = {
 
     db.Products.findAll({include:[{association:"category"}]})
     .then(function(products){
-      res.render('./products/products',{products:products})
-    }); // TODOS LOS PRODUCTOS
+      res.render('./products/products',{products})
+    }) // TODOS LOS PRODUCTOS
 
   },
 
   productCreate: (req, res) => {
-    res.render('./products/productCreate'); // RENDERIZA LA PAGINA DE CREACION DEL PRODUCTO
+
+    res.render('./products/productCreate') // RENDERIZA LA PAGINA DE CREACION DEL PRODUCTO
 
   },
 
   store: (req, res) => {
-
-    let validacion = validationResult(req);
-
+    //VALIDACION
+    let validacion = validationResult(req)
         if (validacion.errors.length > 0) {
-
              return res.render('./products/productCreate', {
                 errors: validacion.mapped(),
                 oldData: req.body
             })
         }
-
+        //IMAGEN DEFAULT
     let img 
-  
     if(!req.file){
       img = 'default.jpg'
     }else{
       img = req.file.filename
     }
 
-    db.Products.create({
+      db.Products.create({
       "image": img,
       "name": req.body.titulo,
       "description": req.body.descripcion,
       "price": req.body.precio,
       "in_sale": req.body.oferta,
       "category_id": req.body.categoria,
-  })
- 
-  .then(() => {res.redirect('/')}); //CREA O GUARDA EL PRODUCTO
+    })
+    .then(() => {res.redirect('/')}) //CREA O GUARDA EL PRODUCTO
 
   },
 
  productEdit: (req, res) => {
  
   db.Products.findByPk(req.params.id)
-  .then(function(product){
-    res.render('./products/productEdit', {product:product}); // RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO
-  });
+    .then(function(product){
+      res.render('./products/productEdit', {product:product}) // RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO
+  })
 
   },
 
@@ -69,7 +61,7 @@ const controllers = {
     db.Products.findByPk(req.params.id)
         .then(function(product){
             res.render('./products/productDetail',{product:product})
-        });// RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO // RENDERIZA LA PAGINA DETALLE DEL PRODUCTO
+        })// RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO // RENDERIZA LA PAGINA DETALLE DEL PRODUCTO
 
   },
 
@@ -81,18 +73,15 @@ const controllers = {
   delete: function (req, res) {
     
         db.Products.destroy({where:{id:req.params.id}})
-        .then(res.redirect('/'))
+          .then(res.redirect('/'))
 
-    },
+  },
 
-
-  
   update: (req,res) => {
     
-    let validacion = validationResult(req);
+    let validacion = validationResult(req)
 
     if (validacion.errors.length > 0) {
-
          return res.render('./products/productEdit', {
             errors: validacion.mapped(),
             oldData: req.body
@@ -120,7 +109,7 @@ const controllers = {
       })
       .then(res.redirect('/'))// EDITA EL PRODUCTO POR SU ID
   }
-
+  
 };
 
 module.exports = controllers;

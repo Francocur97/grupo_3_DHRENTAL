@@ -1,10 +1,10 @@
-insert into category values(
-default,
+INSERT INTO category VALUES(
+DEFAULT,
 "Criolla"
 ),(
-default,
+DEFAULT,
 "Electroacustica"
 ),(
-default,
+DEFAULT,
 "Electrica"
 )

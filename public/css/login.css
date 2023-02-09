@@ -394,6 +394,7 @@ footer {
 }
 .input-producto{
     border-radius: 5px;
+    border: 1px solid gray;
 }
 
 .avatar-edit{

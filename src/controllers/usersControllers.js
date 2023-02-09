@@ -51,6 +51,8 @@ const controllers = {
   
                 if(!req.file){
                   img = 'default.jpg'
+                }else{
+                    img = req.file.filename
                 }
     
             db.User.create({   

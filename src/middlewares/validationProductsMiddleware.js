@@ -17,11 +17,9 @@ const validations = [
         if(req.file.mimetype.startsWith('image/')){
             return img = req.file.filename
         }else{
-            return new Error('La imagen debe ser .jpg, .png, .jpeg, .gif');
+            throw new Error('La imagen debe ser .jpg, .png, .jpeg, .gif')
         }
       
-    })
+    })]
     
-]
-
 module.exports = validations;

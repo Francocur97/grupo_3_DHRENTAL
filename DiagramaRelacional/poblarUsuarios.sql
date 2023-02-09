@@ -1,5 +1,5 @@
-    insert into users values (
-        default,
+    INSERT INTO users VALUES (
+        DEFAULT,
         "user-1675111875119.jpg",
         "Eduardo Josue",
         "Godoy",
@@ -9,7 +9,7 @@
         "1164692686",
         "admin"
         ),(
-        default,
+        DEFAULT,
         "user-1675383233312.png",
         "Lucas Jesus",
         "Miola",
@@ -19,7 +19,7 @@
         "1165895688",
         "user"
         ),(
-        default,
+        DEFAULT,
         "user-1674997666277.jpg",
         "Daiana Mickaela",
         "Lemcke",
@@ -29,7 +29,7 @@
         "1164692686",
         "user"
         ),(
-        default,
+        DEFAULT,
         "user-1675002155096.png",
         "Pablo Damian",
         "Paniagua",
@@ -39,7 +39,7 @@
         "1164692686",
         "user"
         ),(
-        default,
+        DEFAULT,
         "user-1675125099919.png",
         "Maximiliano Leandro",
         "Caffa",
@@ -49,7 +49,7 @@
         "1169826539",
         "user"
         ),(
-        default,
+        DEFAULT,
         "user-1675125146974.jpg",
         "Augusto",
         "Alfaro",

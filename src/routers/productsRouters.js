@@ -8,7 +8,7 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 const validations = require('../middlewares/validationProductsMiddleware');
 
 router.get('/products', productsControllers.products); // RUTA DE TODOS LOS PRODUCTOS
-router.get('/productCreate',adminMiddleware, authMiddleware, productsControllers.productCreate); // RUTA DE RENDERIZADO DE PAGINA DE CREACION DE PRODUCTO
+router.get('/productCreate',adminMiddleware, productsControllers.productCreate); // RUTA DE RENDERIZADO DE PAGINA DE CREACION DE PRODUCTO
 router.post('/create', upload.single('imagen'), validations, productsControllers.store); // CREA O GUARDA EL PRODUCTO
 router.get('/productDetail/:id',productsControllers.productDetail); // RUTA DEL DETALLE DEL PRODUCTO POR SU ID
 router.get('/productEdit/:id', adminMiddleware, authMiddleware, productsControllers.productEdit); // RUTA QUE RENDERIZA LA PAGINA DE EDICION DEL PRODUCTO POR SU ID
