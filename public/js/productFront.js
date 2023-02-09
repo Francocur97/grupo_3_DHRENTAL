@@ -30,6 +30,7 @@ window.addEventListener("load", function () {
 
             errores.push(imagenError.innerHTML = "La imagen debe ser .jpg, jpeg, .png, .gif");
             imagenError.style.color = 'red';
+            imagen.style.border = '1px solid red'
 
         }
         if (titulo.value.length == 0) {
