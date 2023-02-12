@@ -13,6 +13,9 @@ const controllers = {
     us: (req,res) => {
         res.render('us')
     },
+    noAdmin: (req,res) => {
+        res.render('accessDenied')
+    }
 }
 
 module.exports = controllers;

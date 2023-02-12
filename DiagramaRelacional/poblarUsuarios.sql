@@ -57,6 +57,6 @@
         "$2a$10$0XeDJU01gPDp/PzGmqnSyOoW.MLnqSPT79MwRXKZjke1IShZ0WGDy",
         "Necochea 576",
         "1178993063",
-        "null"
+         "admin"
         )
 

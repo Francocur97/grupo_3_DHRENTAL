@@ -30,21 +30,3 @@ const validations = [
 
 module.exports = validations;
 
- 
-// let almacenarUltimoString = req.file.originalname
-        // almacenarUltimoString = almacenarUltimoString.split('.')[1]
-        // console.log(req.file)let img 
-
-          // if(!file){
-        //     throw new Error('Tienes que subir una imagen');
-        // }else{
-        //     return true
-        // }
-        // // else{
-
-        //     if(){
-
-        //     }else{
-        //         return true
-        //     }
-    

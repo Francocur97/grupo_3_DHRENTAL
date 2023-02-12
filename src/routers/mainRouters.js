@@ -6,5 +6,6 @@ const authMiddleware = require('../middlewares/authMiddleware');
 router.get('/', mainControllers.index);
 router.get('/contact', authMiddleware, mainControllers.contact);
 router.get('/us', mainControllers.us);
+router.get('/accessDenied', mainControllers.noAdmin);
 
 module.exports = router;
