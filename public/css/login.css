@@ -185,7 +185,7 @@ header {
 
 
 .titular-login {
-    color: white;
+    color: black;
     width: 100%;
     margin-left: 11%;
 }
@@ -198,6 +198,12 @@ main {
 
 .main-form{
     width: 100%;
+}
+
+.main-us{
+    width: 100%;
+    padding-bottom: 6%;
+    padding-top: 0%;
 }
 
 .sectionLogin {
@@ -326,7 +332,8 @@ footer {
     padding-bottom: 20px;
     padding-top: 20px;
     height: 12em;
-
+    position: relative;
+    bottom: 0;
 }
 
 .derechosReservados {
@@ -558,6 +565,11 @@ footer {
 
 @media(min-width:1024px) {
 
+    .main-detail{
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 6%;
+    }
     .mobile {
         display: none;
     }
@@ -567,9 +579,17 @@ footer {
     }
 
     .sectionLogin {
+        margin-bottom: 5%;
+        width: 40%;
+        margin-left: 30%;
+        padding: 0;
+    }
 
-        width: 50%;
-        margin-left: 25%;
+    .section-register {
+        margin-bottom: 5%;
+        width: 40%;
+        margin-left: 30%;
+        padding: 0;
     }
 
     nav ul li a {

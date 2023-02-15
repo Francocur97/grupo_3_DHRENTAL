@@ -9,17 +9,18 @@ const validations = [
     body('precio').notEmpty().withMessage('Tienes que escribir un precio').bail().isNumeric().withMessage('El precio debe ser en numeros'),
     body('imagen').custom((value,{ req })=>{
  
-        let img = req.file;
-  
-        if(!req.file){
-            return  img = 'default.jpg'
-        }
-        if(req.file.mimetype.startsWith('image/')){
-            return img = req.file.filename
-        }else{
-            throw new Error('La imagen debe ser .jpg, .png, .jpeg, .gif')
-        }
+            let img = req.file;
       
-    })]
+            if(!req.file){
+                return  img = 'default.jpg'
+            }
+            if(req.file.mimetype.startsWith('image/')){
+                return img = req.file.filename
+            }
+            return false
+          
+        }).withMessage('Formatos aceptados jpg, jpeg, png, gif')
+    
+]
     
 module.exports = validations;

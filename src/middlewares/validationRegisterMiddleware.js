@@ -19,12 +19,9 @@ const validations = [
         }
         if(req.file.mimetype.startsWith('image/')){
             return img = req.file.filename
-        }else{
-            throw new Error('La imagen debe ser .jpg, .png, .jpeg, .gif');
-             
-        }
+        }return false
       
-    })
+    }).withMessage('Formatos aceptados jpg, jpeg, png, gif')
     
 ]
 

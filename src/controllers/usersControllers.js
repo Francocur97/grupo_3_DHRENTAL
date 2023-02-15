@@ -92,7 +92,7 @@ const controllers = {
     delete: (req, res) => {
 
         db.User.destroy({where:{id:req.params.id}})
-        .then(res.redirect('/'));
+        .then(res.redirect('../users'));
 
     },
 
@@ -109,7 +109,7 @@ const controllers = {
     
     update: (req, res) => {
 
-        let validacion = validationResult(req)
+         let validacion =  validationResult(req)
 
         if (validacion.errors.length > 0) {
 
