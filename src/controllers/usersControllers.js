@@ -109,40 +109,43 @@ const controllers = {
     
     update: (req, res) => {
 
-         let validacion =  validationResult(req)
+    db.User.findByPk(req.params.id)
+        .then((user)=>{
 
-        if (validacion.errors.length > 0) {
+            let validacion =  validationResult(req)
 
-             return res.render('./users/userEdit', {
-                errors: validacion.mapped(),
-                oldData: req.body
-            })
-        }
-       
-    let img 
-    if(!req.file){
-      img = req.body.imagen
-    }else{
-      img = req.file.filename
-    }
+            if (validacion.errors.length > 0) {
+                 return res.render('./users/userEdit', {
+                    errors: validacion.mapped(),
+                    user:user
+                })
+            }else{
 
-        db.User.update(
-            {   "image": img,
-                "name": req.body.nombre,
-                "last_name": req.body.apellido,
-                "email": req.body.email,
-                "password":bcryptjs.hashSync(req.body.password,10), 
-                "adress": req.body.domicilio,
-                "cell_phone": req.body.celular,
-                "rol":req.body.rol
-            },{
-                where:{
-                    id:req.params.id
+                let img 
+                if(!req.file){
+                  img = req.body.imagen
+                }else{
+                  img = req.file.filename
                 }
+            
+            db.User.update({  
+                 "image": img,
+                  "name": req.body.nombre,
+                  "last_name": req.body.apellido,
+                   "email": req.body.email,
+                   "password":bcryptjs.hashSync(req.body.password,10), 
+                   "adress": req.body.domicilio,
+                  "cell_phone": req.body.celular,
+                   "rol":req.body.rol
+           },{
+                            where:{
+                                id:req.params.id
+            }
             })
-            .then(res.redirect('/')) // EDITA EL USUARIO POR SU ID 
-
-    },
+            .then(res.redirect('/'))}})
+        
+        
+        }, // EDITA EL USUARIO POR SU ID 
 
     login: (req, res) => {
 

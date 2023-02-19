@@ -78,36 +78,43 @@ const controllers = {
   },
 
   update: (req,res) => {
-    
-    let validacion = validationResult(req)
 
-    if (validacion.errors.length > 0) {
-         return res.render('./products/productEdit', {
-            errors: validacion.mapped(),
-            oldData: req.body
-        })
-    }
+    db.Products.findByPk(req.params.id)
+    .then((product)=>{
 
-    let img 
-    if(!req.file){
-      img = req.body.imagen
-    }else{
-      img = req.file.filename
-    }
+        let validacion =  validationResult(req)
 
-    db.Products.update({
-        "image": img,
-        "name": req.body.titulo,
-        "description": req.body.descripcion,
-        "price": req.body.precio,
-        "in_sale": req.body.oferta,
-        "category_id": req.body.categoria,
-      },{
-          where:{
-              id:req.params.id
+        if (validacion.errors.length > 0) {
+             return res.render('./products/productEdit', {
+                errors: validacion.mapped(),
+                product:product
+            })
+        }else{
+
+          let img 
+          if(!req.file){
+            img = req.body.imagen
+          }else{
+            img = req.file.filename
           }
-      })
-      .then(res.redirect('/'))// EDITA EL PRODUCTO POR SU ID
+            db.Products.update({
+              "image": img,
+              "name": req.body.titulo,
+              "description": req.body.descripcion,
+              "price": req.body.precio,
+              "in_sale": req.body.oferta,
+              "category_id": req.body.categoria,
+            },{
+                where:{
+                    id:req.params.id
+                }
+            })
+            .then(res.redirect('/'))}})
+  
+
+   
+
+  // EDITA EL PRODUCTO POR SU ID
   }
   
 };

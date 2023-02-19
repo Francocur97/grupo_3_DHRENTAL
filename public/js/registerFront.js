@@ -1,7 +1,6 @@
 window.addEventListener("load", function () {
 
-
-    const formulario = document.querySelector("form.formlogin");
+    const formulario = document.querySelector("form");
     const nombre = document.querySelector("#name");
     const apellido = document.querySelector("#last_name");
     const email = document.querySelector("#email");

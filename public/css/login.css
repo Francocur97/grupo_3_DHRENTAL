@@ -309,6 +309,7 @@ label {
     align-self: center;
     border: 1px solid #0875AF;
     height: 30px;
+    cursor: pointer;
 }
 
 .recuerdame {

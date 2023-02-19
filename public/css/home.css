@@ -94,6 +94,7 @@ main {
     border: 1px solid #0875AF;
     height: 30px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .form-detalle{
