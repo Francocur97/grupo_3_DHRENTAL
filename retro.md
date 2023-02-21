@@ -41,8 +41,8 @@ Conclusiones Sprint 6:
 5. Dejar de hacer: Haber echo la base de datos sin diagrama primero.
 
 Conclusiones Sprint 7:
-1. Comenzar a hacer: 
-2. Hacer más: 
-3. Continuar haciendo: 
-4. Hacer menos: No escribir 
-5. Dejar de hacer: 
+1. Comenzar a hacer: Aprender mas a usar las validacion como middleware, y utilizarlas en es middleware(ejemplo:tenemos varias validaciones del back-end, en los controladores y no en el middleware de validaciones)
+2. Hacer más: Aprender a usar entre el evento keypress o el submit, dependiendo como quieras usarlo.
+3. Continuar haciendo: Constatemente trabajar en el proyecto y encontrar cada dia mas aspectos que mejorar.
+4. Hacer menos: aprender a diferenciar las id o clases que vamos a usar en el front end como validaciones, para no generar q la aplicacion no la reconozca y nosotros perdiendo tiempo pensando que esta mal vinculado el js a nuestro front-end(O HACER UN CONSOLE.LOG CUANDO VINCULAMOS NUESTRO JS AL FRONT END)
+5. Dejar de hacer: Leer bien el sprint 7 y despues hacer anotaciones mas sencillas y no sobre los globales de lo que pide el proyecto integrador.Para poder dividir las tareas y hacer mas sencillamente.
