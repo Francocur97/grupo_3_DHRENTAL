@@ -1,40 +1,23 @@
-const path = require('path');
 const db = require('../../database/models');
-
-
-
 
 const productApiControllers = {
 
     list: (req,res) => {
 
-        db.User.findAll()
+       db.User.findAll()
         .then(users => {
+            let response = {
+            meta:{
+                status:200,
+                count: users.length,
+                url:'http://localhost:3000/api/users/'
+            },
+            data:users
+        }
 
-           
-             
-            const response = {
-                meta:{
-                    status:200,
-                    count:users.length,
-                    url: 'http://localhost:3000/api/users'
-                },
-                data:[ users.forEach(element => {
-                return element.name
-   
-                  
-                })]
-            }
+    res.json(response)
+})
 
-             res.json(response)
-                
-            })
-            
-            
-    
-           
-       
-       
     },    
     detail: (req,res) => {
         db.User.findByPk(req.params.id)
@@ -44,14 +27,14 @@ const productApiControllers = {
                     status:200,
                     url:'http://localhost:3000/api/users/' + req.params.id 
                 },
-                data:user,
-                url: user.f
+                data:user
 
         }
-        res.json(response);
+
+        res.json(response)
+        
     })
     },
-
 
 }
 

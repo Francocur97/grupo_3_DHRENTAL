@@ -13,9 +13,12 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const routersMain = require('./routers/mainRouters');
 const routersUsers = require('./routers/usersRouters');
 const routersProducts = require('./routers/productsRouters');
+
 // APIS ROUTERS
+
 const productsApiRouter = require('./routers/api/productsApiRouter');
 const usersApiRouter = require('./routers/api/usersApiRouters');
+const categorysApiRouter = require('./routers/api/categoryApiRouters');
 
 //MIDDLEWARES
 
@@ -44,6 +47,7 @@ app.use('/products', routersProducts);
 
 app.use('/api/products', productsApiRouter);
 app.use('/api/users', usersApiRouter);
+app.use('/api/categorys',categorysApiRouter);
 
 // ERROR 404 
 

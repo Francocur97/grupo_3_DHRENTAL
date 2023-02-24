@@ -1,9 +1,8 @@
-const path = require('path');
 const db = require('../../database/models');
 
 const productApiControllers = {
     list: (req,res) => {
-        db.Products.findAll({include:["category"]})
+        db.Products.findAll({include:[{association:"category"}]})
         .then(products => {
             let response = {
                 meta:{
@@ -12,7 +11,6 @@ const productApiControllers = {
                     url: 'http://localhost:3000/api/products'
                 },
                 data:products,
-                url:'http://localhost:3000/api/products/' + req.params.id
         }
         res.json(response);
     })
@@ -23,9 +21,9 @@ const productApiControllers = {
             let response = {
                 meta:{
                     status:200,
-                    url:'api/products/' + req.params.id 
+                    url:'http://localhost:3000/api/products/' + req.params.id 
                 },
-                data:[product]
+                data:product
         }
         res.json(response);
     })
