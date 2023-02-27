@@ -35,8 +35,8 @@ app.use(session({ secret:'secret', resave:false, saveUninitialized:false}));
 app.use(userLoggedMiddleware);
 
 
-app.listen(3000, () => {
-    console.log('servidor corriendo en el puerto 3000');
+app.listen(3001, () => {
+    console.log('servidor corriendo en el puerto 3001');
 });
 
 app.use('/', routersMain);

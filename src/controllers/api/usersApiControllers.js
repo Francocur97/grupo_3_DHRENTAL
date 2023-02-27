@@ -7,11 +7,11 @@ const productApiControllers = {
        db.User.findAll()
         .then(users => {
             let response = {
-            meta:{
+            meta:[{
                 status:200,
                 count: users.length,
                 url:'http://localhost:3000/api/users/'
-            },
+            }],
             data:users
         }
 
@@ -23,10 +23,10 @@ const productApiControllers = {
         db.User.findByPk(req.params.id)
         .then(user => {
             let response = {
-                meta:{
+                meta:[{
                     status:200,
                     url:'http://localhost:3000/api/users/' + req.params.id 
-                },
+                }],
                 data:user
 
         }

@@ -5,11 +5,11 @@ const productApiControllers = {
         db.Category.findAll()
         .then(categorys => {
             let response = {
-                meta:{
+                meta:[{
                     status:200,
                     count:categorys.length,
                     url: 'http://localhost:3000/api/categorys'
-                },
+                }],
                 data:categorys,
         }
         res.json(response);
@@ -19,10 +19,10 @@ const productApiControllers = {
         db.Category.findByPk(req.params.id)
         .then(category => {
             let response = {
-                meta:{
+                meta:[{
                     status:200,
                     url:'http://localhost:3000/api/categorys/' + req.params.id 
-                },
+                }],
                 data:category
         }
         res.json(response);
