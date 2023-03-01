@@ -178,7 +178,7 @@ const controllers = {
 
         if(req.body.remember && req.session.userLogged == user){
 
-                res.cookie('email', req.body.email, { maxAge: 10000 * 30 });
+                res.cookie('email', req.body.email, { maxAge: 10000 * 3000 });
 
             }
         return res.redirect('/')

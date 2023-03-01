@@ -312,6 +312,12 @@ label {
     cursor: pointer;
 }
 
+.button:hover{
+    background-color: #261FB6;
+    width: 50%;
+    transition: 1000ms;
+}
+
 .recuerdame {
     margin-bottom: 10px;
 }
